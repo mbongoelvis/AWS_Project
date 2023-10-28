@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AWS Project</title>
+
+    <!-- style linking -->
+    <link rel="stylesheet" href="../style/generalstyle.css" />
+    <link rel="stylesheet" href="../style/mobilestyle.css" />
+    <link rel="stylesheet" href="../style/tabletstyles.css" />
+    <!-- font from google you need to be online for this to take effect -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- google icons link -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+    />
+    <!-- tailwind linking -->
+    <link rel="stylesheet" href="../dist/output.css">
+  </head>
+  <body class="w-full h-screen bg-black">
+    <!-- ========== navigations =========== -->
+    <nav class="bg-indigo-950 fixed w-full">
+      <div class="wrapper container mx-auto flex justify-between items-center pt-3">
+        <div class="logo">
+          <img src="../images/logo.png" alt="logo" class="w-[8rem] cursor-pointer">
+        </div>
+        <div class="flex gap-12 text-white">
+          <div class="btn active flex flex-col justify-center items-center w-full cursor-pointer">
+            <span class="material-symbols-outlined"> home </span>
+            <p>Home</p>
+          </div>
+          <div class="btn flex flex-col justify-center items-center w-full cursor-pointer">
+            <span class="material-symbols-outlined"> people </span>
+            <p>Friends</p>
+          </div>
+          <div div class="btn flex flex-col justify-center items-center w-full cursor-pointer">
+            <span class="material-symbols-outlined"> work </span>
+            <p>Jobs</p>
+          </div>
+          <div div class="btn flex flex-col justify-center items-center w-full cursor-pointer">
+            <span class="material-symbols-outlined"> message </span>
+            <p>Messages</p>
+          </div>
+          <div div class="btn flex flex-col justify-center items-center w-full cursor-pointer">
+            <span class="material-symbols-outlined"> notifications </span>
+            <p>Notification</p>
+          </div>
+        </div>
+        <div class="profile flex gap-5">
+          <button class="post-btn bg-white px-5 rounded-2xl font-bold">Creat post</button>
+          <img
+            src="../images/Rectangle 1.png"
+            alt=""
+            width="40px"
+            height="40px"
+            style="border-radius: 50%"
+          />
+        </div>
+      </div>
+    </nav>
+
+    <!-- ========== main section ========== -->
+    <main>
+      <div class="container mx-auto grid text-white grid-cols-12 pt-[5rem] gap-5">
+        <!-- ========left======== -->
+        <div class="left col-span-3 bg-indigo-950 p-3 rounded-lg">
+          <!-- user editable -->
+          <div>
+            <div class="flex justify-between border-gray-700 border-b-[1px] pb-5">
+              <div class="flex gap-2">
+                <img src="../images/Rectangle 1.png" alt="user image" class="w-12 rounded-3xl cursor-pointer">
+                 <div>
+                <p>Mbongo elvis</p>
+                <p class="text-gray-600">Software engineer</p>
+              </div>
+              </div>
+             <!-- more (the 3 dots) -->
+              <div>
+                <span class="material-symbols-outlined cursor-pointer">
+                    more_horiz
+                </span>
+              </div>
+            </div>
+            <!-- edit profile botton -->
+            <button class="mt-5 text-gray-500 hover:text-gray-200 transition-all">Edit profile</button>
+          </div>
+          <!-- ads -->
+          <div></div>
+        </div>
+
+        <!-- =======cetner======== -->
+        <div class="center col-span-6 bg-indigo-950">
+          <div class="adding-post">
+            
+          </div>
+        </div>
+        <!-- ===========right========= -->
+        <div class="right col-span-3 bg-indigo-950">
+         
+        </div>
+      </div>
+    </main>
+    <div class="messages"></div>
+    <!-- =========== creating post ============= -->
+    <div class="creat-post post-board">
+      <div class="post"></div>
+    </div>
+    <!-- Dont try to change the path of this script file because anything that happens to this project is your fault -->
+    <script src="../script/script.js"></script>
+  </body>
+</html>
