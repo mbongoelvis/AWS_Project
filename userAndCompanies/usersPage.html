@@ -71,9 +71,9 @@
     <main>
       <div class="container mx-auto grid text-white grid-cols-12 pt-[5rem] gap-5">
         <!-- ========left======== -->
-        <div class="left col-span-3 bg-indigo-950 p-3 rounded-lg">
+        <div class="left-side left col-span-3">
           <!-- user editable -->
-          <div>
+          <div class="bg-indigo-950 rounded-lg p-3 sticky top-[5rem]">
             <div class="flex justify-between border-gray-700 border-b-[1px] pb-5">
               <div class="flex gap-2">
                 <img src="../images/Rectangle 1.png" alt="user image" class="w-12 rounded-3xl cursor-pointer">
@@ -93,17 +93,219 @@
             <button class="mt-5 text-gray-500 hover:text-gray-200 transition-all">Edit profile</button>
           </div>
           <!-- ads -->
-          <div></div>
+          <p class="mt-10 sticky top-[16.2rem]">Suggestions</p>
+          <div class="bg-indigo-950 mt-5 rounded-lg max-h-[11rem] overflow-scroll sticky top-[19rem]">
+            <div class=" p-3 flex justify-between">
+            <div class="flex gap-2">
+              <img src="../images/Rectangle 1.png" alt="" width="60px">
+              <div>
+                <p>Orange Cameroon</p>
+              <p class="text-gray-600 text-sm">Telecom Company</p>
+              </div>
+            </div>
+            <span class="material-symbols-outlined cursor-pointer">
+                    more_horiz
+                </span>
+          </div>
+
+          <div class="bg-indigo-950 rounded-lg p-3 mt-3 flex justify-between">
+            <div class="flex gap-2">
+              <img src="../images/Rectangle 1.png" alt="" width="60px">
+              <div>
+                <p>MTN Cameroon</p>
+              <p class="text-gray-600 text-sm">Telecom Company</p>
+              </div>
+            </div>
+            <span class="material-symbols-outlined cursor-pointer">
+                    more_horiz
+                </span>
+          </div>
+
+          <div class="bg-indigo-950 rounded-lg p-3 mt-3 flex justify-between">
+            <div class="flex gap-2">
+              <img src="../images/Rectangle 1.png" alt="" width="60px">
+              <div>
+                <p>Nexttel Cameroon</p>
+              <p class="text-gray-600 text-sm">Telecom Company</p>
+              </div>
+            </div>
+            <span class="material-symbols-outlined cursor-pointer">
+                    more_horiz
+                </span>
+          </div>
+
+          <div class="bg-indigo-950 rounded-lg p-3 mt-3 flex justify-between">
+            <div class="flex gap-2">
+              <img src="../images/Rectangle 1.png" alt="" width="60px">
+              <div>
+                <p>CAMTEL Cameroon</p>
+              <p class="text-gray-600 text-sm">Telecom Company</p>
+              </div>
+            </div>
+            <span class="material-symbols-outlined cursor-pointer">
+                    more_horiz
+                </span>
+          </div>
+          </div>
+          
         </div>
 
         <!-- =======cetner======== -->
-        <div class="center col-span-6 bg-indigo-950">
-          <div class="adding-post">
-            
+        <div class="center col-span-6">
+          <!-- adding post -->
+          <div class="flex w-full gap-3">
+            <img src="../images/Rectangle 1.png" alt="" width="60px" class="rounded-[50%]">
+            <form action="#" class="flex items-center w-full gap-3">
+              <input class="w-full h-[80%] rounded-3xl pl-3 outline-none text-black" type="text" name="post" id="" placeholder="Enter text to post">
+              <button class="text-indigo-950 bg-white px-5 py-2 rounded-3xl w-[20%] cursor-pointer font-bold">Add post</button>
+            </form>
           </div>
+
+          <!-- post content -->
+          <div class="card">
+            <!-- individual posts -->
+           <div class=" bg-indigo-950 px-2 rounded-lg">
+            <div class="flex justify-between mt-5 pt-3">
+              <div class="flex gap-3">
+                <img src="../images/Rectangle 1.png" alt="" width="50px" height="100px" class="rounded-[50%]">
+                <div>
+                  <p>Mbongo elvis</p>
+                  <p class="text-gray-500 text-sm">3h ago</p>
+                </div>
+              </div>
+              <span class="material-symbols-outlined cursor-pointer">
+                    more_horiz
+                </span>
+            </div>
+            <!-- post image and caption -->
+            <div class="mt-2">
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur maxime voluptatem facere sapiente, voluptas mollitia</p>
+              <div class="w-full mt-1">
+                <img src="../images/Rectangle 1.png" alt="" class="w-full rounded-xl">
+              </div>
+            </div>
+           </div>
+          </div>
+
+          <!-- individual posts -->
+           <div class=" bg-indigo-950 px-2 rounded-lg">
+            <div class="flex justify-between mt-5 pt-3">
+              <div class="flex gap-3">
+                <img src="../images/Rectangle 1.png" alt="" width="50px" height="100px" class="rounded-[50%]">
+                <div>
+                  <p>Mbongo elvis</p>
+                  <p class="text-gray-500 text-sm">3h ago</p>
+                </div>
+              </div>
+              <span class="material-symbols-outlined cursor-pointer">
+                    more_horiz
+                </span>
+            </div>
+            <!-- post image and caption -->
+            <div class="mt-2">
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur maxime voluptatem facere sapiente, voluptas mollitia</p>
+              <div class="w-full mt-1">
+                <img src="../images/Rectangle 1.png" alt="" class="w-full rounded-xl">
+              </div>
+            </div>
+           </div>
+
+           <!-- individual posts -->
+           <div class=" bg-indigo-950 px-2 rounded-lg">
+            <div class="flex justify-between mt-5 pt-3">
+              <div class="flex gap-3">
+                <img src="../images/Rectangle 1.png" alt="" width="50px" height="100px" class="rounded-[50%]">
+                <div>
+                  <p>Mbongo elvis</p>
+                  <p class="text-gray-500 text-sm">3h ago</p>
+                </div>
+              </div>
+              <span class="material-symbols-outlined cursor-pointer">
+                    more_horiz
+                </span>
+            </div>
+            <!-- post image and caption -->
+            <div class="mt-2">
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur maxime voluptatem facere sapiente, voluptas mollitia</p>
+              <div class="w-full mt-1">
+                <img src="../images/Rectangle 1.png" alt="" class="w-full rounded-xl">
+              </div>
+            </div>
+           </div>
+
+           <!-- individual posts -->
+           <div class=" bg-indigo-950 px-2 rounded-lg">
+            <div class="flex justify-between mt-5 pt-3">
+              <div class="flex gap-3">
+                <img src="../images/Rectangle 1.png" alt="" width="50px" height="100px" class="rounded-[50%]">
+                <div>
+                  <p>Mbongo elvis</p>
+                  <p class="text-gray-500 text-sm">3h ago</p>
+                </div>
+              </div>
+              <span class="material-symbols-outlined cursor-pointer">
+                    more_horiz
+                </span>
+            </div>
+            <!-- post image and caption -->
+            <div class="mt-2">
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur maxime voluptatem facere sapiente, voluptas mollitia</p>
+              <div class="w-full mt-1">
+                <img src="../images/Rectangle 1.png" alt="" class="w-full rounded-xl">
+              </div>
+            </div>
+           </div>
+
+
+           <!-- individual posts -->
+           <div class=" bg-indigo-950 px-2 rounded-lg">
+            <div class="flex justify-between mt-5 pt-3">
+              <div class="flex gap-3">
+                <img src="../images/Rectangle 1.png" alt="" width="50px" height="100px" class="rounded-[50%]">
+                <div>
+                  <p>Mbongo elvis</p>
+                  <p class="text-gray-500 text-sm">3h ago</p>
+                </div>
+              </div>
+              <span class="material-symbols-outlined cursor-pointer">
+                    more_horiz
+                </span>
+            </div>
+            <!-- post image and caption -->
+            <div class="mt-2">
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur maxime voluptatem facere sapiente, voluptas mollitia</p>
+              <div class="w-full mt-1">
+                <img src="../images/Rectangle 1.png" alt="" class="w-full rounded-xl">
+              </div>
+            </div>
+           </div>
+
+
+           <!-- individual posts -->
+           <div class=" bg-indigo-950 px-2 rounded-lg">
+            <div class="flex justify-between mt-5 pt-3">
+              <div class="flex gap-3">
+                <img src="../images/Rectangle 1.png" alt="" width="50px" height="100px" class="rounded-[50%]">
+                <div>
+                  <p>Mbongo elvis</p>
+                  <p class="text-gray-500 text-sm">3h ago</p>
+                </div>
+              </div>
+              <span class="material-symbols-outlined cursor-pointer">
+                    more_horiz
+                </span>
+            </div>
+            <!-- post image and caption -->
+            <div class="mt-2">
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur maxime voluptatem facere sapiente, voluptas mollitia</p>
+              <div class="w-full mt-1">
+                <img src="../images/Rectangle 1.png" alt="" class="w-full rounded-xl">
+              </div>
+            </div>
+           </div>
         </div>
         <!-- ===========right========= -->
-        <div class="right col-span-3 bg-indigo-950">
+        <div class="right col-span-3 bg-indigo-950 sticky left-side">
          
         </div>
       </div>
