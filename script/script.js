@@ -19,7 +19,33 @@ const post = document.querySelectorAll(".creat-post");
 const mess = document.querySelector(".message");
 const card = document.querySelector(".card-container");
 
-// remove active class from all navigations
+//============= popup for edit profile class===========
+const openpop1 = document.querySelector(".edit")
+const openedit = document.querySelector(".openedit")
+const closeedit = document.querySelector(".close-edit")
+const inputfields = document.querySelectorAll(".fields")
+
+openedit.addEventListener("click", () => {
+  if (openpop1.classList.contains("hidden")) {
+    openpop1.classList.remove("hidden")
+    openpop1.classList.add("flex");
+  }
+  // body.addEventListener("scroll", function (event) {
+  //   event.preventDefault();
+  // });
+})
+closeedit.addEventListener("click", () => { 
+  openpop1.classList.add("hidden");
+  inputfields.forEach(field => {
+    field.value = "";
+  })
+})
+
+
+
+
+
+// ======== remove active class from all navigations ======
 const removeActiveClass = () => {
   btn.forEach((items) => {
     items.classList.remove("active");
@@ -38,7 +64,7 @@ btn.forEach((btn) => {
   });
 });
 
-// feting the data from the fake backend and displaying them
+// === feting the data from the fake backend and displaying them ==
 try {
   async function fetching() {
     const data = await fetch("/data.json")
