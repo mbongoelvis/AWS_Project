@@ -9,7 +9,7 @@
 }
 
 nav .active{
-    border-bottom: 3px solid rgb(255, 255, 255);
+    border-bottom: 3px solid white;
 }
 /* .left-side{
     position: sticky;
@@ -17,4 +17,10 @@ nav .active{
     top: 0rem;
 } */
 
-
+.dropshadow{
+    box-shadow:  0 0 30px rgba(255, 255, 255, 0.935);
+    transition: all .5s linear;
+}
+.color{
+    color: rgba(255, 255, 255, 0.322);
+}

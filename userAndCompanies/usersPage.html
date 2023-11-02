@@ -25,9 +25,10 @@
     <!-- tailwind linking -->
     <link rel="stylesheet" href="../dist/output.css">
   </head>
-  <body class="w-full h-screen bg-black">
+  <body class="w-full bg-secondary relative">
+    
     <!-- ========== navigations =========== -->
-    <nav class="bg-indigo-950 fixed w-full">
+    <nav class="bg-primary fixed w-full z-10">
       <div class="wrapper container mx-auto flex justify-between items-center pt-3">
         <div class="logo">
           <img src="../images/logo.png" alt="logo" class="w-[8rem] cursor-pointer">
@@ -45,7 +46,7 @@
             <span class="material-symbols-outlined"> work </span>
             <p>Jobs</p>
           </div>
-          <div div class="btn flex flex-col justify-center items-center w-full cursor-pointer">
+          <div div class="btn light flex flex-col justify-center items-center w-full cursor-pointer">
             <span class="material-symbols-outlined"> message </span>
             <p>Messages</p>
           </div>
@@ -55,9 +56,9 @@
           </div>
         </div>
         <div class="profile flex gap-5">
-          <button class="post-btn bg-white px-5 rounded-2xl font-bold">Creat post</button>
+          <button class="post-btn bg-white text-black px-4 rounded-3xl font-bold">Creat post</button>
           <img
-            src="../images/Rectangle 1.png"
+            src="../images/domi.avif"
             alt=""
             width="40px"
             height="40px"
@@ -65,7 +66,17 @@
           />
         </div>
       </div>
+
+       <!-- =============== all pop ups ================= -->
+        <!-- edit profile pop up -->
+        <div class="w-full h-screen bg-gray-700/60 backdrop-blur-sm absolute inset-0">
+          <form action="edit-profile">
+            
+          </form>
+        </div>
     </nav>
+
+
 
     <!-- ========== main section ========== -->
     <main>
@@ -73,18 +84,18 @@
         <!-- ========left======== -->
         <div class="left-side left col-span-3">
           <!-- user editable -->
-          <div class="bg-indigo-950 rounded-lg p-3 sticky top-[5rem]">
+          <div class="bg-primary rounded-lg p-3 sticky top-[5rem]">
             <div class="flex justify-between border-gray-700 border-b-[1px] pb-5">
               <div class="flex gap-2">
-                <img src="../images/Rectangle 1.png" alt="user image" class="w-12 rounded-3xl cursor-pointer">
+                <img src="../images/domi.avif" alt="user image" class="w-12 rounded-3xl cursor-pointer">
                  <div>
-                <p>Mbongo elvis</p>
+                <p class="text-textcolor">Mbongo elvis</p>
                 <p class="text-gray-600">Software engineer</p>
               </div>
               </div>
              <!-- more (the 3 dots) -->
               <div>
-                <span class="material-symbols-outlined cursor-pointer">
+                <span class="material-symbols-outlined cursor-pointer text-textcolor">
                     more_horiz
                 </span>
               </div>
@@ -94,10 +105,10 @@
           </div>
           <!-- ads -->
           <p class="mt-10 sticky top-[16.2rem]">Suggestions</p>
-          <div class="bg-indigo-950 mt-5 rounded-lg max-h-[11rem] overflow-scroll sticky top-[19rem]">
-            <div class=" p-3 flex justify-between">
+          <div class="bg-primary mt-5 rounded-lg px-2 max-h-[11rem] overflow-scroll sticky top-[19rem]">
+            <div class=" p-3 flex justify-between border-b border-gray-600">
             <div class="flex gap-2">
-              <img src="../images/Rectangle 1.png" alt="" width="60px">
+              <img src="../images/domi.avif" alt="" width="60px" class="rounded">
               <div>
                 <p>Orange Cameroon</p>
               <p class="text-gray-600 text-sm">Telecom Company</p>
@@ -108,9 +119,9 @@
                 </span>
           </div>
 
-          <div class="bg-indigo-950 rounded-lg p-3 mt-3 flex justify-between">
+          <div class="bg-primary rounded-lg p-3 mt-3 flex justify-between">
             <div class="flex gap-2">
-              <img src="../images/Rectangle 1.png" alt="" width="60px">
+              <img src="../images/domi.avif" alt="" width="60px" class="rounded">
               <div>
                 <p>MTN Cameroon</p>
               <p class="text-gray-600 text-sm">Telecom Company</p>
@@ -121,201 +132,151 @@
                 </span>
           </div>
 
-          <div class="bg-indigo-950 rounded-lg p-3 mt-3 flex justify-between">
-            <div class="flex gap-2">
-              <img src="../images/Rectangle 1.png" alt="" width="60px">
-              <div>
-                <p>Nexttel Cameroon</p>
-              <p class="text-gray-600 text-sm">Telecom Company</p>
-              </div>
-            </div>
-            <span class="material-symbols-outlined cursor-pointer">
-                    more_horiz
-                </span>
           </div>
-
-          <div class="bg-indigo-950 rounded-lg p-3 mt-3 flex justify-between">
-            <div class="flex gap-2">
-              <img src="../images/Rectangle 1.png" alt="" width="60px">
-              <div>
-                <p>CAMTEL Cameroon</p>
-              <p class="text-gray-600 text-sm">Telecom Company</p>
-              </div>
-            </div>
-            <span class="material-symbols-outlined cursor-pointer">
-                    more_horiz
-                </span>
-          </div>
-          </div>
-          
         </div>
+
 
         <!-- =======cetner======== -->
         <div class="center col-span-6">
           <!-- adding post -->
           <div class="flex w-full gap-3">
-            <img src="../images/Rectangle 1.png" alt="" width="60px" class="rounded-[50%]">
+            <img src="../images/domi.avif" alt="" width="50px" class="rounded-[50%]">
             <form action="#" class="flex items-center w-full gap-3">
               <input class="w-full h-[80%] rounded-3xl pl-3 outline-none text-black" type="text" name="post" id="" placeholder="Enter text to post">
-              <button class="text-indigo-950 bg-white px-5 py-2 rounded-3xl w-[20%] cursor-pointer font-bold">Add post</button>
+              <button class="text-indigo-950 bg-white px-2 py-2 rounded-3xl w-[20%] cursor-pointer font-bold">Search</button>
             </form>
           </div>
 
-          <!-- post content -->
-          <div class="card">
-            <!-- individual posts -->
-           <div class=" bg-indigo-950 px-2 rounded-lg">
-            <div class="flex justify-between mt-5 pt-3">
-              <div class="flex gap-3">
-                <img src="../images/Rectangle 1.png" alt="" width="50px" height="100px" class="rounded-[50%]">
-                <div>
-                  <p>Mbongo elvis</p>
-                  <p class="text-gray-500 text-sm">3h ago</p>
+          <!-- individual post -->
+          <div class="card-container mt-10 px-5">
+            <div class="rounded-lg bg-primary p-3">
+              <!-- card profile -->
+              <div class="flex justify-between w-full">
+                <div class="flex gap-3">
+                  <img  src="../images/domi.avif" width="50px" alt="" class="rounded-[50%]">
+                  <div>
+                    <p>Mbongo elvis</p>
+                    <p class="text-gray-500">3h Ago</p>
+                  </div>
                 </div>
-              </div>
-              <span class="material-symbols-outlined cursor-pointer">
+                <span class="material-symbols-outlined cursor-pointer">
                     more_horiz
                 </span>
-            </div>
-            <!-- post image and caption -->
-            <div class="mt-2">
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur maxime voluptatem facere sapiente, voluptas mollitia</p>
-              <div class="w-full mt-1">
-                <img src="../images/Rectangle 1.png" alt="" class="w-full rounded-xl">
+              </div>
+              <!-- post caption -->
+              <div class="mt-3">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa dolores quaerat ullam modi? Soluta asperiores voluptas tempore, voluptatibus vitae illo. Molestiae, mollitia aspernatur at et ullam rerum eos itaque alias.</p>
+              </div>
+              <!-- post image -->
+              <div class="min-h-[5rem] my-5">
+               <img src="../images/post.webp" alt="posts" class="rounded-lg w-full h-[80%]">
+              </div>
+              <!-- likes, share and comment -->
+              <div class="flex">
+                <!-- likes -->
+                <div class="w-full flex justify-center cursor-pointer hover:bg-gray-800 h-12 items-center gap-2 transition-all ease-linear">
+                  <span class="material-symbols-outlined">
+                      thumb_up
+                  </span>
+                  <span>5</span>
+                </div>
+                <!-- comment -->
+                <div class="w-full flex justify-center cursor-pointer items-center gap-2 transition-all ease-linear hover:bg-gray-800 h-12">
+                  <span class="material-symbols-outlined">
+                    chat_bubble
+                  </span>
+                  <span>7</span>
+                </div>
+                <!-- share -->
+                <div class="w-full flex justify-center cursor-pointer h-12 items-center gap-2 transition-all ease-linear hover:bg-gray-800">
+                  <span class="material-symbols-outlined">
+                      share
+                  </span>
+                  <span>5</span>
+                </div>
               </div>
             </div>
-           </div>
           </div>
-
-          <!-- individual posts -->
-           <div class=" bg-indigo-950 px-2 rounded-lg">
-            <div class="flex justify-between mt-5 pt-3">
-              <div class="flex gap-3">
-                <img src="../images/Rectangle 1.png" alt="" width="50px" height="100px" class="rounded-[50%]">
-                <div>
-                  <p>Mbongo elvis</p>
-                  <p class="text-gray-500 text-sm">3h ago</p>
-                </div>
-              </div>
-              <span class="material-symbols-outlined cursor-pointer">
-                    more_horiz
-                </span>
-            </div>
-            <!-- post image and caption -->
-            <div class="mt-2">
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur maxime voluptatem facere sapiente, voluptas mollitia</p>
-              <div class="w-full mt-1">
-                <img src="../images/Rectangle 1.png" alt="" class="w-full rounded-xl">
-              </div>
-            </div>
-           </div>
-
-           <!-- individual posts -->
-           <div class=" bg-indigo-950 px-2 rounded-lg">
-            <div class="flex justify-between mt-5 pt-3">
-              <div class="flex gap-3">
-                <img src="../images/Rectangle 1.png" alt="" width="50px" height="100px" class="rounded-[50%]">
-                <div>
-                  <p>Mbongo elvis</p>
-                  <p class="text-gray-500 text-sm">3h ago</p>
-                </div>
-              </div>
-              <span class="material-symbols-outlined cursor-pointer">
-                    more_horiz
-                </span>
-            </div>
-            <!-- post image and caption -->
-            <div class="mt-2">
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur maxime voluptatem facere sapiente, voluptas mollitia</p>
-              <div class="w-full mt-1">
-                <img src="../images/Rectangle 1.png" alt="" class="w-full rounded-xl">
-              </div>
-            </div>
-           </div>
-
-           <!-- individual posts -->
-           <div class=" bg-indigo-950 px-2 rounded-lg">
-            <div class="flex justify-between mt-5 pt-3">
-              <div class="flex gap-3">
-                <img src="../images/Rectangle 1.png" alt="" width="50px" height="100px" class="rounded-[50%]">
-                <div>
-                  <p>Mbongo elvis</p>
-                  <p class="text-gray-500 text-sm">3h ago</p>
-                </div>
-              </div>
-              <span class="material-symbols-outlined cursor-pointer">
-                    more_horiz
-                </span>
-            </div>
-            <!-- post image and caption -->
-            <div class="mt-2">
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur maxime voluptatem facere sapiente, voluptas mollitia</p>
-              <div class="w-full mt-1">
-                <img src="../images/Rectangle 1.png" alt="" class="w-full rounded-xl">
-              </div>
-            </div>
-           </div>
-
-
-           <!-- individual posts -->
-           <div class=" bg-indigo-950 px-2 rounded-lg">
-            <div class="flex justify-between mt-5 pt-3">
-              <div class="flex gap-3">
-                <img src="../images/Rectangle 1.png" alt="" width="50px" height="100px" class="rounded-[50%]">
-                <div>
-                  <p>Mbongo elvis</p>
-                  <p class="text-gray-500 text-sm">3h ago</p>
-                </div>
-              </div>
-              <span class="material-symbols-outlined cursor-pointer">
-                    more_horiz
-                </span>
-            </div>
-            <!-- post image and caption -->
-            <div class="mt-2">
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur maxime voluptatem facere sapiente, voluptas mollitia</p>
-              <div class="w-full mt-1">
-                <img src="../images/Rectangle 1.png" alt="" class="w-full rounded-xl">
-              </div>
-            </div>
-           </div>
-
-
-           <!-- individual posts -->
-           <div class=" bg-indigo-950 px-2 rounded-lg">
-            <div class="flex justify-between mt-5 pt-3">
-              <div class="flex gap-3">
-                <img src="../images/Rectangle 1.png" alt="" width="50px" height="100px" class="rounded-[50%]">
-                <div>
-                  <p>Mbongo elvis</p>
-                  <p class="text-gray-500 text-sm">3h ago</p>
-                </div>
-              </div>
-              <span class="material-symbols-outlined cursor-pointer">
-                    more_horiz
-                </span>
-            </div>
-            <!-- post image and caption -->
-            <div class="mt-2">
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur maxime voluptatem facere sapiente, voluptas mollitia</p>
-              <div class="w-full mt-1">
-                <img src="../images/Rectangle 1.png" alt="" class="w-full rounded-xl">
-              </div>
-            </div>
-           </div>
         </div>
         <!-- ===========right========= -->
-        <div class="right col-span-3 bg-indigo-950 sticky left-side">
-         
+        <div class="right col-span-3 sticky left-side">
+         <div class=" bg-primary rounded-lg p-2 flex flex-col gap-5">
+          <h2 class="text-xl font-bold mb-5">Add to your feed</h2>
+          <div class="w-full">
+            <div class="px-4 flex gap-5">
+              <div class="w-[50px] h-[50px] rounded-full overflow-hidden">
+                <img src="../images/post.webp" alt="" class="w-full h-full">
+              </div>
+              <div>
+                <p class="text-[16px] font-bold">Food reserve factory</p>
+                <p class="text-sm text-gray-500">Start up company in Duala</p>
+                <button class="px-7 py-[7px] border mt-4 rounded-[30px]"> + follow</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="w-full">
+            <div class="px-4 flex gap-5">
+              <div class="w-[50px] h-[50px] rounded-full overflow-hidden">
+                <img src="../images/post.webp" alt="" class="w-full h-full">
+              </div>
+              <div>
+                <p class="text-[16px] font-bold">Food reserve factory</p>
+                <p class="text-sm text-gray-500">Start up company in Duala</p>
+                <button class="px-7 py-[7px] border mt-4 rounded-[30px]"> + follow</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="w-full">
+            <div class="px-4 flex gap-5">
+              <div class="w-[50px] h-[50px] rounded-full overflow-hidden">
+                <img src="../images/post.webp" alt="" class="w-full h-full">
+              </div>
+              <div>
+                <p class="text-[16px] font-bold">Food reserve factory</p>
+                <p class="text-sm text-gray-500">Start up company in Duala</p>
+                <button class="px-7 py-[7px] border mt-4 rounded-[30px]"> + follow</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="w-full">
+            <div class="px-4 flex gap-5">
+              <div class="w-[50px] h-[50px] rounded-full overflow-hidden">
+                <img src="../images/post.webp" alt="" class="w-full h-full">
+              </div>
+              <div>
+                <p class="text-[16px] font-bold">Food reserve factory</p>
+                <p class="text-sm text-gray-500">Start up company in Duala</p>
+                <button class="px-7 py-[7px] border mt-4 rounded-[30px]"> + follow</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class=" bg-primary"></div>
         </div>
       </div>
     </main>
-    <div class="messages"></div>
-    <!-- =========== creating post ============= -->
-    <div class="creat-post post-board">
-      <div class="post"></div>
+
+
+    <!-- ======= update profile ======= -->
+    <dialog class="border-2">
+      <form action="updateProfile">
+        <h3>Update your profile</h3>
+      </form>
+    </dialog>
+    <div>
+      <!-- chat button -->
+      <div class="fixed bottom-[3rem] right-[3rem] bg-primary w-[4rem] h-[4rem] flex items-center justify-center rounded-[50%] cursor-pointer drop-shadow-lg shadow-blue-700  message">
+        <span class="material-symbols-outlined text-white">
+          mode_comment
+        </span>
+      </div>
     </div>
     <!-- Dont try to change the path of this script file because anything that happens to this project is your fault -->
+    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.27/bundled/lenis.min.js"></script> 
     <script src="../script/script.js"></script>
+    
   </body>
 </html>
