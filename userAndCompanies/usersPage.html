@@ -24,6 +24,8 @@
     />
     <!-- tailwind linking -->
     <link rel="stylesheet" href="../dist/output.css">
+    <!-- loading library for transition -->
+    <link rel="stylesheet" href="../node_modules/@loadingio/transition.css/transition.min.css">
   </head>
   <body class="w-full bg-secondary relative">
     
@@ -38,13 +40,9 @@
             <span class="material-symbols-outlined"> home </span>
             <p>Home</p>
           </div>
-          <div class="btn flex flex-col justify-center items-center w-full cursor-pointer">
-            <span class="material-symbols-outlined"> people </span>
-            <p>Friends</p>
-          </div>
           <div div class="btn flex flex-col justify-center items-center w-full cursor-pointer">
             <span class="material-symbols-outlined"> work </span>
-            <p>Jobs</p>
+            <p>Internship</p>
           </div>
           <div div class="btn light flex flex-col justify-center items-center w-full cursor-pointer">
             <span class="material-symbols-outlined"> message </span>
@@ -60,6 +58,7 @@
           <img
             src="../images/domi.avif"
             alt=""
+            class="cursor-pointer"
             width="40px"
             height="40px"
             style="border-radius: 50%"
@@ -73,7 +72,7 @@
           <span class="material-symbols-outlined close-edit text-white text-[2.5rem] cursor-pointer absolute right-[34rem] top-[7rem]">
             close
           </span>
-          <form action="edit-profile" class="text-gray-700 w-[30%] h-[60%] bg-white rounded-xl p-4" >
+          <form action="edit-profile" class="text-gray-700 w-[30%] h-[60%] bg-white rounded-xl p-4 ld ld-bounce-in" >
             <p class="text-center font-bold text-2xl">Update info</p>
             <div>
               <label for="name" class="block mb-2 mt-5">Change username</label>

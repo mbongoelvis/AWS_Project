@@ -5,5 +5,8 @@
   "scripts": {
     "build": "npx tailwindcss -i ./src/input.css -o ./dist/output.css",
     "dev": "npx tailwindcss -i ./src/input.css -o ./dist/output.css --watch"
+  },
+  "dependencies": {
+    "@loadingio/transition.css": "^3.0.0"
   }
 }
