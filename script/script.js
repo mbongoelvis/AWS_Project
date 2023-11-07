@@ -24,6 +24,7 @@ const openpop1 = document.querySelector(".edit")
 const openedit = document.querySelector(".openedit")
 const closeedit = document.querySelector(".close-edit")
 const inputfields = document.querySelectorAll(".fields")
+const notificationcard = document.querySelector(".notification-card")
 
 openedit.addEventListener("click", () => {
   if (openpop1.classList.contains("hidden")) {
@@ -61,6 +62,18 @@ btn.forEach((btn) => {
         mess.classList.remove("dropshadow");
       }, 2000);
     }
+
+    // chacking for notifications button to be click
+    if (e.target.classList.contains("noti")) {
+      if (notificationcard.classList.contains("hidden")) {
+        notificationcard.classList.remove("hidden");
+        notificationcard.classList.add("flex");
+      }
+    }
+    else if (!e.target.classList.contains("noti")) {
+      notificationcard.classList.add("hidden");
+      notificationcard.classList.remove("flex");
+    }
   });
 });
 
@@ -82,7 +95,9 @@ try {
               <!-- card profile -->
               <div class="flex justify-between w-full">
                 <div class="flex gap-3">
-                  <img loading="lazy" src="${post.userImage}" width="50px" alt="" class="rounded-[50%]">
+                  <div class="w-[50px] h-[50px] rounded-[500px] overflow-hidden">
+                    <img loading="lazy" src="${post.userImage}" class="object-cover w-full h-full">
+                  </div>
                   <div>
                     <p>${post.username}</p>
                     <p class="text-gray-500">${post.postTime}</p>
@@ -97,8 +112,8 @@ try {
                 <p>${post.caption}</p>
               </div>
               <!-- post image -->
-              <div class="min-h-[5rem] my-5">
-               <img loading="lazy" src="${post.postImage}" alt="posts" class="rounded-lg w-full h-[80%]">
+              <div class="h-[30rem] overflow-hidden rounded-lg my-5">
+              <img src="${post.postImage}" class="w-full object-cover">
               </div>
               <!-- likes, share and comment -->
               <div class="flex">

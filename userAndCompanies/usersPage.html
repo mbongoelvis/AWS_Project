@@ -35,7 +35,7 @@
         <div class="logo">
           <img src="../images/logo.png" alt="logo" class="w-[8rem] cursor-pointer">
         </div>
-        <div class="flex gap-12 text-white">
+        <div class=" w-[30rem] absolute bottom-0 lg:bottom-0 lg:relative flex gap-12 text-white">
           <div class="btn active flex flex-col justify-center items-center w-full cursor-pointer">
             <span class="material-symbols-outlined"> home </span>
             <p>Home</p>
@@ -44,17 +44,81 @@
             <span class="material-symbols-outlined"> work </span>
             <p>Internship</p>
           </div>
-          <div div class="btn light flex flex-col justify-center items-center w-full cursor-pointer">
+          <div div class="btn light flex flex-col justify-center items-center h-full w-full cursor-pointer">
             <span class="material-symbols-outlined"> message </span>
             <p>Chat</p>
           </div>
-          <div div class="btn flex flex-col justify-center items-center w-full cursor-pointer">
+          <div div class="btn flex flex-col justify-center items-center w-full cursor-pointer relative noti">
             <span class="material-symbols-outlined"> notifications </span>
             <p>Notification</p>
+
+            <!-- notification popo up -->
+            <div class="bg-primary h-[300px] w-[450px] absolute top-[3.5rem] rounded-lg p-4 hidden flex-col gap-3 overflow-scroll notification-card ld ld-bounce-in">
+              <!-- individual notifications -->
+             <div class="flex items-center justify-between bg-gray-700/30 p-3 rounded-xl">
+               <div class="flex items-center gap-4">
+                <div class="w-[4rem] h-[4rem] rounded-[500px] overflow-hidden">
+                  <img src="../images/Rectangle 1.png" alt="" class="w-full h-full">
+                </div>
+                <div>
+                  <p class="font-bold">Array anteria <span class="font-normal text-gray-500">sent you a gift</span></p>
+                  <p class="text-gray-600">4 hours ago</p>
+                </div>
+              </div>
+              <span class="material-symbols-outlined cursor-pointer text-textcolor">
+                    more_horiz
+              </span>
+             </div>
+
+             <div class="flex items-center justify-between bg-gray-700/30 p-3 rounded-xl">
+               <div class="flex items-center gap-4">
+                <div class="w-[4rem] h-[4rem] rounded-[500px] overflow-hidden">
+                  <img src="../images/Rectangle 1.png" alt="" class="w-full h-full">
+                </div>
+                <div>
+                  <p class="font-bold">Array anteria <span class="font-normal text-gray-500">sent you a gift</span></p>
+                  <p class="text-gray-600">4 hours ago</p>
+                </div>
+              </div>
+              <span class="material-symbols-outlined cursor-pointer text-textcolor">
+                    more_horiz
+              </span>
+             </div>
+
+             <div class="flex items-center justify-between bg-gray-700/30 p-3 rounded-xl">
+               <div class="flex items-center gap-4">
+                <div class="w-[4rem] h-[4rem] rounded-[500px] overflow-hidden">
+                  <img src="../images/Rectangle 1.png" alt="" class="w-full h-full">
+                </div>
+                <div>
+                  <p class="font-bold">Array anteria <span class="font-normal text-gray-500">sent you a gift</span></p>
+                  <p class="text-gray-600">4 hours ago</p>
+                </div>
+              </div>
+              <span class="material-symbols-outlined cursor-pointer text-textcolor">
+                    more_horiz
+              </span>
+             </div>
+
+             <div class="flex items-center justify-between bg-gray-700/30 p-3 rounded-xl">
+               <div class="flex items-center gap-4">
+                <div class="w-[4rem] h-[4rem] rounded-[500px] overflow-hidden">
+                  <img src="../images/Rectangle 1.png" alt="" class="w-full h-full">
+                </div>
+                <div>
+                  <p class="font-bold">Array anteria <span class="font-normal text-gray-500">sent you a gift</span></p>
+                  <p class="text-gray-600">4 hours ago</p>
+                </div>
+              </div>
+              <span class="material-symbols-outlined cursor-pointer text-textcolor">
+                    more_horiz
+              </span>
+             </div>
+            </div>
           </div>
         </div>
-        <div class="profile flex gap-5">
-          <button class="post-btn bg-white text-black px-4 rounded-3xl font-bold">Creat post</button>
+        <div class="profile flex gap-3 items-center">
+          <button class="post-btn bg-white text-black px-4 py-2 rounded-3xl font-bold">Creat post</button>
           <img
             src="../images/domi.avif"
             alt=""
@@ -63,7 +127,18 @@
             height="40px"
             style="border-radius: 50%"
           />
+          <!-- mobile menu -->
+        <div class="lg:hidden">
+          <img src="../images/menu.png" alt="" width="30px" class="cursor-pointer">
+          <div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
         </div>
+        </div>
+        
       </div>
 
        <!-- =============== all pop ups ================= -->
@@ -98,10 +173,10 @@
 
 
     <!-- ========== main section ========== -->
-    <main>
+    <main class="z-10">
       <div class="container mx-auto grid text-white grid-cols-12 pt-[5rem] gap-5">
         <!-- ========left======== -->
-        <div class="left-side left col-span-3">
+        <div class="left-side left col-span-3 hidden lg:flex lg:flex-col">
           <!-- user editable -->
           <div class="bg-primary rounded-lg p-3 sticky top-[5rem]">
             <div class="flex justify-between border-gray-700 border-b-[1px] pb-5">
@@ -151,12 +226,38 @@
                 </span>
           </div>
 
+          <div class="bg-primary rounded-lg p-3 mt-3 flex justify-between">
+            <div class="flex gap-2">
+              <img src="../images/domi.avif" alt="" width="60px" class="rounded">
+              <div>
+                <p>MTN Cameroon</p>
+              <p class="text-gray-600 text-sm">Telecom Company</p>
+              </div>
+            </div>
+            <span class="material-symbols-outlined cursor-pointer">
+                    more_horiz
+                </span>
+          </div>
+
+          <div class="bg-primary rounded-lg p-3 mt-3 flex justify-between">
+            <div class="flex gap-2">
+              <img src="../images/domi.avif" alt="" width="60px" class="rounded">
+              <div>
+                <p>MTN Cameroon</p>
+              <p class="text-gray-600 text-sm">Telecom Company</p>
+              </div>
+            </div>
+            <span class="material-symbols-outlined cursor-pointer">
+                    more_horiz
+                </span>
+          </div>
+
           </div>
         </div>
 
 
         <!-- =======cetner======== -->
-        <div class="center col-span-6">
+        <div class="center col-span-12 lg:col-span-6">
           <!-- adding post -->
           <div class="flex w-full gap-3">
             <img src="../images/domi.avif" alt="" width="50px" class="rounded-[50%]">
@@ -167,59 +268,13 @@
           </div>
 
           <!-- individual post -->
-          <div class="card-container mt-10 px-5">
-            <div class="rounded-lg bg-primary p-3">
-              <!-- card profile -->
-              <div class="flex justify-between w-full">
-                <div class="flex gap-3">
-                  <img  src="../images/domi.avif" width="50px" alt="" class="rounded-[50%]">
-                  <div>
-                    <p>Mbongo elvis</p>
-                    <p class="text-gray-500">3h Ago</p>
-                  </div>
-                </div>
-                <span class="material-symbols-outlined cursor-pointer">
-                    more_horiz
-                </span>
-              </div>
-              <!-- post caption -->
-              <div class="mt-3">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa dolores quaerat ullam modi? Soluta asperiores voluptas tempore, voluptatibus vitae illo. Molestiae, mollitia aspernatur at et ullam rerum eos itaque alias.</p>
-              </div>
-              <!-- post image -->
-              <div class="min-h-[5rem] my-5">
-               <img src="../images/post.webp" alt="posts" class="rounded-lg w-full h-[80%]">
-              </div>
-              <!-- likes, share and comment -->
-              <div class="flex">
-                <!-- likes -->
-                <div class="w-full flex justify-center cursor-pointer hover:bg-gray-800 h-12 items-center gap-2 transition-all ease-linear">
-                  <span class="material-symbols-outlined">
-                      thumb_up
-                  </span>
-                  <span>5</span>
-                </div>
-                <!-- comment -->
-                <div class="w-full flex justify-center cursor-pointer items-center gap-2 transition-all ease-linear hover:bg-gray-800 h-12">
-                  <span class="material-symbols-outlined">
-                    chat_bubble
-                  </span>
-                  <span>7</span>
-                </div>
-                <!-- share -->
-                <div class="w-full flex justify-center cursor-pointer h-12 items-center gap-2 transition-all ease-linear hover:bg-gray-800">
-                  <span class="material-symbols-outlined">
-                      share
-                  </span>
-                  <span>5</span>
-                </div>
-              </div>
-            </div>
+          <div class="card-container max-h-full mt-10 px-5 overflow-hidden">
+            <!-- this is where all the post will appear when the data is fetched -->
           </div>
         </div>
         <!-- ===========right========= -->
-        <div class="right col-span-3 sticky left-side">
-         <div class=" bg-primary rounded-lg p-2 flex flex-col gap-5">
+        <div class="right hidden lg:flex lg:flex-col lg:col-span-3 left-side">
+         <div class=" bg-primary rounded-lg p-2 flex flex-col sticky top-[5rem] gap-5">
           <h2 class="text-xl font-bold mb-5">Add to your feed</h2>
           <div class="w-full">
             <div class="px-4 flex gap-5">
