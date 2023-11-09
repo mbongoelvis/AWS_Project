@@ -21,19 +21,21 @@ const card = document.querySelector(".card-container");
 
 //============= popup for edit profile class===========
 const openpop1 = document.querySelector(".edit")
-const openedit = document.querySelector(".openedit")
+const openedit = document.querySelectorAll(".openedit")
 const closeedit = document.querySelector(".close-edit")
 const inputfields = document.querySelectorAll(".fields")
 const notificationcard = document.querySelector(".notification-card")
 
-openedit.addEventListener("click", () => {
-  if (openpop1.classList.contains("hidden")) {
-    openpop1.classList.remove("hidden")
-    openpop1.classList.add("flex");
-  }
-  // body.addEventListener("scroll", function (event) {
-  //   event.preventDefault();
-  // });
+openedit.forEach(btn => {
+  btn.addEventListener("click", () => {
+    if (openpop1.classList.contains("hidden")) {
+      openpop1.classList.remove("hidden");
+      openpop1.classList.add("flex");
+    }
+    // body.addEventListener("scroll", function (event) {
+    //   event.preventDefault();
+    // });
+  });
 })
 closeedit.addEventListener("click", () => { 
   openpop1.classList.add("hidden");
@@ -112,8 +114,8 @@ try {
                 <p>${post.caption}</p>
               </div>
               <!-- post image -->
-              <div class="h-[30rem] overflow-hidden rounded-lg my-5">
-              <img src="${post.postImage}" class="w-full object-cover">
+              <div class="max-h-[20rem] lg:max-h-[30rem] overflow-hidden rounded-lg my-5">
+              <img src="${post.postImage}" class="w-full h-full object-cover">
               </div>
               <!-- likes, share and comment -->
               <div class="flex">

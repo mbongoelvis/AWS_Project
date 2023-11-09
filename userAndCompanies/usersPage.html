@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
+    <meta charset="UTF-8" />py-6 lg:py-0
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>AWS Project</title>
 
@@ -30,12 +30,12 @@
   <body class="w-full bg-secondary relative">
     
     <!-- ========== navigations =========== -->
-    <nav class="bg-primary fixed w-full z-10">
-      <div class="wrapper container mx-auto flex justify-between items-center pt-3">
+    <nav class="bg-primary fixed w-full z-10 py-2 lg:py-0">
+      <div class="wrapper container mx-auto flex justify-between items-center">
         <div class="logo">
           <img src="../images/logo.png" alt="logo" class="w-[8rem] cursor-pointer">
         </div>
-        <div class=" w-[30rem] absolute bottom-0 lg:bottom-0 lg:relative flex gap-12 text-white">
+        <div class=" w-[30rem] hidden lg:relative lg:flex gap-12 text-white">
           <div class="btn active flex flex-col justify-center items-center w-full cursor-pointer">
             <span class="material-symbols-outlined"> home </span>
             <p>Home</p>
@@ -122,7 +122,7 @@
           <img
             src="../images/domi.avif"
             alt=""
-            class="cursor-pointer"
+            class="cursor-pointer openedit"
             width="40px"
             height="40px"
             style="border-radius: 50%"
@@ -147,7 +147,7 @@
           <span class="material-symbols-outlined close-edit text-white text-[2.5rem] cursor-pointer absolute right-[34rem] top-[7rem]">
             close
           </span>
-          <form action="edit-profile" class="text-gray-700 w-[30%] h-[60%] bg-white rounded-xl p-4 ld ld-bounce-in" >
+          <form action="edit-profile" class="text-gray-700  w-[30%] h-[60%] bg-white rounded-xl p-4 ld ld-bounce-in" >
             <p class="text-center font-bold text-2xl">Update info</p>
             <div>
               <label for="name" class="block mb-2 mt-5">Change username</label>
@@ -259,7 +259,7 @@
         <!-- =======cetner======== -->
         <div class="center col-span-12 lg:col-span-6">
           <!-- adding post -->
-          <div class="flex w-full gap-3">
+          <div class="flex w-full gap-3 px-3">
             <img src="../images/domi.avif" alt="" width="50px" class="rounded-[50%]">
             <form action="#" class="flex items-center w-full gap-3">
               <input class="w-full h-[80%] rounded-3xl pl-3 outline-none text-black" type="text" name="post" id="" placeholder="Enter text to post">
