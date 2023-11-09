@@ -24,3 +24,15 @@ nav .active{
 .color{
     color: rgba(255, 255, 255, 0.322);
 }
+
+/* removing the scroll bar */
+
+*::-webkit-scrollbar {
+  display: none;
+}
+
+/* For Firefox */
+*::-moz-scrollbar {
+  -ms-overflow-style: none;
+    scrollbar-width: 0;
+}

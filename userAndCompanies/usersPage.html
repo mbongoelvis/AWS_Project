@@ -26,11 +26,17 @@
     <link rel="stylesheet" href="../dist/output.css">
     <!-- loading library for transition -->
     <link rel="stylesheet" href="../node_modules/@loadingio/transition.css/transition.min.css">
+
+    <!-- custom css -->
+    <style>
+      /* For Chrome, Safari, and Opera */
+
+    </style>
   </head>
   <body class="w-full bg-secondary relative">
     
     <!-- ========== navigations =========== -->
-    <nav class="bg-primary fixed w-full z-10 py-2 lg:py-0">
+    <nav class="bg-primary fixed w-full pt-3 top-0 z-20">
       <div class="wrapper container mx-auto flex justify-between items-center">
         <div class="logo">
           <img src="../images/logo.png" alt="logo" class="w-[8rem] cursor-pointer">
@@ -118,7 +124,7 @@
           </div>
         </div>
         <div class="profile flex gap-3 items-center">
-          <button class="post-btn bg-white text-black px-4 py-2 rounded-3xl font-bold">Creat post</button>
+          <button class="post-btn bg-white text-black px-4 py-2 rounded-3xl font-bold create-ps">Creat post</button>
           <img
             src="../images/domi.avif"
             alt=""
@@ -143,7 +149,7 @@
 
        <!-- =============== all pop ups ================= -->
         <!-- edit profile pop up -->
-        <div class="edit w-full hidden h-screen bg-gray-700/60 backdrop-blur-sm absolute inset-0 items-center justify-center transition-all ease">
+        <div class="edit w-full hidden h-screen bg-gray-700/60 backdrop-blur-sm absolute inset-0 items-center justify-center transition-all ease z-40">
           <span class="material-symbols-outlined close-edit text-white text-[2.5rem] cursor-pointer absolute lg:right-[34rem] top-[7rem]">
             close
           </span>
@@ -168,12 +174,28 @@
             <button class="bg-red-500 px-5 py-3 mt-6 text-white rounded-md">save change</button>
           </form>
         </div>
+
+        <!-- ============= pop up from post ================ -->
+        <div class="create-post w-full hidden h-screen bg-gray-800/60 backdrop-blur-sm absolute inset-0 items-center justify-center transition-all ease z-40">
+          <form class="bg-white w-[80%] md:w-[70%] lg:w-[50%] p-6 rounded-xl post-form">
+            <h3 class="text-center font-bold text-xl mb-5">Create post</h3>
+            <div>
+              <label class="block font-bold text-gray-600 text-lg">Description</label>
+              <textarea name="post-description" cols="30" rows="10" placeholder="Enter post description" class="border border-gray-600 rounded-lg w-full mb-3 p-2 outline-none"></textarea>
+            </div>
+            <input type="file">
+            <div class="w-full flex justify-between mt-4">
+              <button class="text-gray-600 text-lg close-post">cancle</button>
+              <button class="py-2 px-6 bg-red-600 text-white font-bold rounded-lg">post</button>
+            </div>
+          </form>
+        </div>
     </nav>
 
 
 
     <!-- ========== main section ========== -->
-    <main class="z-10">
+    <main>
       <div class="container mx-auto grid text-white grid-cols-12 pt-[5rem] gap-5">
         <!-- ========left======== -->
         <div class="left-side left col-span-3 hidden lg:flex lg:flex-col">
@@ -333,14 +355,7 @@
       </div>
     </main>
 
-
-    <!-- ======= update profile ======= -->
-    <dialog class="border-2">
-      <form action="updateProfile">
-        <h3>Update your profile</h3>
-      </form>
-    </dialog>
-    <div>
+  
       <!-- chat button -->
       <div class="fixed bottom-[3rem] right-[3rem] bg-primary w-[4rem] h-[4rem] flex items-center justify-center rounded-[50%] cursor-pointer drop-shadow-lg shadow-blue-700  message">
         <span class="material-symbols-outlined text-white">

@@ -26,6 +26,32 @@ const closeedit = document.querySelector(".close-edit")
 const inputfields = document.querySelectorAll(".fields")
 const notificationcard = document.querySelector(".notification-card")
 
+// =========== create post =================
+const createPost = document.querySelector(".create-ps")
+const postdiv = document.querySelector(".create-post")
+const closepost = document.querySelector(".close-post")
+const postform = document.querySelector(".post-form")
+
+createPost.addEventListener("click", () => {
+  if (postdiv.classList.contains("hidden")) {
+    postdiv.classList.remove("hidden");
+    postdiv.classList.add("flex");
+    postform.addEventListener("submit", (e) => {
+      e.preventDefault();
+    });
+  }
+});
+closepost.addEventListener("click", (e) => { 
+  if (!postdiv.classList.contains("hidden")) {
+      postdiv.classList.remove("flex");
+    postdiv.classList.add("hidden");
+    postform.addEventListener("submit", (e) => {
+      e.preventDefault();
+    });
+  }
+})
+
+
 openedit.forEach(btn => {
   btn.addEventListener("click", () => {
     if (openpop1.classList.contains("hidden")) {
