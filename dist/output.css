@@ -758,6 +758,10 @@ video {
   max-height: 20rem;
 }
 
+.min-h-\[60\%\] {
+  min-height: 60%;
+}
+
 .w-12 {
   width: 3rem;
 }
@@ -792,6 +796,30 @@ video {
 
 .w-full {
   width: 100%;
+}
+
+.min-w-\[30\%\] {
+  min-width: 30%;
+}
+
+.min-w-\[60\%\] {
+  min-width: 60%;
+}
+
+.min-w-\[15rem\] {
+  min-width: 15rem;
+}
+
+.min-w-\[25rem\] {
+  min-width: 25rem;
+}
+
+.min-w-\[20rem\] {
+  min-width: 20rem;
+}
+
+.min-w-\[23rem\] {
+  min-width: 23rem;
 }
 
 .cursor-pointer {
@@ -1148,6 +1176,10 @@ video {
 
   .lg\:bottom-0 {
     bottom: 0px;
+  }
+
+  .lg\:right-\[34rem\] {
+    right: 34rem;
   }
 
   .lg\:col-span-3 {
