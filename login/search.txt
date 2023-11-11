@@ -1,0 +1,7 @@
+how to use many AWS with RDS as database, cognito for authentication and
+authorization, together with S3, ELB, EC2, SES, SNS to build complete web app
+which has been belt with HTML, CSS, JavaScript, React. Explaining how this
+various AWS services can be like to each other to serve the purpose of the app.
+It is Web app that enables students or those looking to gain training skills to
+get places to do internships and for jobseekers to find temporal or permanent
+employment.

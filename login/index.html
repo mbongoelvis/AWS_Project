@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css">
+
+    <title>AWS project</title>
+
+    <style>
+        .input-form{
+            padding: 2rem;
+        }
+
+        label{
+            font-size: 1.8rem;
+            position: relative;
+            color: #888;
+            transition: all 0.3s ease;
+        }
+
+        label.active {
+            color: #f00;
+            top: -20px;
+        }
+    </style>
+</head>
+<body>
+    
+    <header class="main-header">
+        <a href="#">
+            <div class="logo">Logo</div>
+        </a>
+
+        <nav class="main-nav">
+            <ul class="main-nav-links">
+                <li><a href="#" class="main-nav-link">Home</a></li>
+                <li><a href="#" class="main-nav-link">About</a></li>
+                <li><a href="#" class="main-nav-link">Services</a></li>
+                <li><a href="#" class="main-nav-link">contact</a></li>
+                <li><a href="#" class="main-nav-link">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="input-form">
+        <label for="myInput">Name:</label><br>
+        <input type="text" id="myInput">
+    </div>
+
+    <script>
+        const inputElement = document.getElementById("myInput");
+        const label = document.querySelector('label[for="myInput"]');
+
+        // console.log(inputElement);
+        // console.log(label);
+
+        inputElement.addEventListener('input', () => {
+            if (inputElement.value !== ''){
+                label.classList.add('active');
+            } else{
+                label.classList.remove('active');
+            }
+        })
+    </script>
+</body>
+</html>

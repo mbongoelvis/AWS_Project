@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles.css" />
+
+    <title>Login</title>
+  </head>
+  <body>
+    <div class="login-container">
+      <div class="login-form">
+        <div class="login-img-box">
+          <h2 class="title">InternHive</h2>
+          <img class="login-img" src="images/alexis-chloe-TYDkKEgc0Fg-unsplash-removebg-preview.png" alt="a girl wearing a blouse" />
+
+          <div class="card card--1">
+            <div class="card-img">
+              <img src="images/customer-1.jpeg" alt="man face">
+            </div>
+            <div class="card-content">
+              <h3>Mbongo Elvis</h3>
+              <p>Software Engineer</p>
+            </div>
+            <div class="icon-img">
+              <img src="images/Icon.png" alt="icon">
+            </div>
+          </div>
+
+          <div class="card card--2">
+            <div class="card-img">
+              <img src="images/customer-2.jpeg" alt="man face">
+            </div>
+            <div class="card-content">
+              <h3>Gracious</h3>
+              <p>Software Engineer</p>
+            </div>
+            <div class="icon-img">
+              <img src="images/Icon.png" alt="icon">
+            </div>
+          </div>
+
+          <div class="card card--3">
+            <div class="card-img">
+              <img src="images/customer-3.jpeg" alt="man face">
+            </div>
+            <div class="card-content">
+              <h3>Tah Blaise</h3>
+              <p>Software Engineer</p>
+            </div>
+            <div class="icon-img">
+              <img src="images/Icon.png" alt="icon">
+            </div>
+          </div>
+        </div>
+        <div class="form-section">
+          <div class="sign-in-categories">
+            <button type="button" class="employer-btn active-btn">
+              Individual
+            </button>
+            <button type="button" class="company-btn">Company</button>
+          </div>
+
+          <div class="anim">
+            <!-- FORM--1 -->
+            <div class="log-in-form employee log-in-form-1 fm ">
+              <form class="sign-in-form" action="#">
+                <div class="form-header">
+                  <h2 class="login-header">Log In</h2>
+                  <p class="login-subtext">Please enter your details</p>
+                </div>
+                <div class="input-field">
+                  <!-- <span class="icon"><ion-icon name="lock-open-outline"></ion-icon></span> -->
+                  <span class="icon"><ion-icon name="mail-outline"></ion-icon></span>
+                  <input type="email" name="email" required />
+                  <label for="email" class="email">Email</label>
+                  <p class="error-message email-error">incorrect email</p>
+                </div>
+                <div class="input-field">
+                  <span class="icon"><ion-icon name="lock-closed-outline"></ion-icon></span>
+                  <input type="password" name="password" required />
+                  <label for="password" class="password">Password</label>
+                  <p class="error-message pass-error">Incorrect Password</p>
+                </div>
+                <div>
+                  <!-- <input type="checkbox" name="" id=""> -->
+                  <a href="#" class="pass-recover">Forgot password?</a>
+                  <p class="wrong-pass"></p>
+                </div>
+              
+                <button type="button" class="login-btn btn">LOG IN</button>
+                <button type="button" class="login-google-btn btn">
+                  Log in with Google
+                </button>
+              </form>
+            </div>
+
+            <!-- FORM--2 -->
+            <div class="log-in-form company log-in-form-2 hidden paint fm">
+              <form class="sign-in-form sign-in-form--company" action="#">
+                <div class="form-header">
+                  <h2 class="login-header">Log In</h2>
+                  <p class="login-subtext">Please enter your details</p>
+                </div>
+
+                <div class="input-field">
+                  <span class="icon"><ion-icon name="mail-outline"></ion-icon></span>
+                  <input type="email" required />
+                  <label for="email" class="first-name">Company Email</label>
+                  <p class="error-message email-error">incorrect email</p>
+                </div>
+                <div class="input-field">
+                  <span class="icon"><ion-icon name="lock-closed-outline"></ion-icon></span>
+                  <input type="password" name="" required />
+                  <label for="password" class="password">Password</label>
+                  <p class="error-message pass-error">Incorrect Password</p>
+                </div>
+                <div>
+                  <a href="#" class="pass-recover">Forgot password?</a>
+                  <p class="wrong-pass"></p>
+                </div>
+              
+                <button type="button" class="login-btn btn">LOG IN</button>
+                <button type="button" class="login-google-btn btn">
+                  <ion-icon name="logo-google"></ion-icon>
+                  Log in with Google
+                </button>
+              </form>
+            </div>
+
+            <!-- FORM--3 -->
+            <div class="sign-up-form employee sign-in-form-3 hidden fm">
+              <form class="sign-in-form" action="#">
+                <div class="form-header">
+                  <h2 class="login-header">Sign Up</h2>
+                  <p class="login-subtext">Please enter your details</p>
+                </div>
+
+                <div class="input-field">
+                  <span class="icon"><ion-icon name="person-add-outline"></ion-icon></span>
+                  <input type="text" name="name" required />
+                  <label for="name" class="name">User Name</label>
+                  <p class="error-message name-error"></p>
+                </div>
+                <div class="input-field">
+                  <span class="icon"><ion-icon name="mail-outline"></ion-icon></span>
+                  <input type="email" required />
+                  <label for="email" class="email">Email</label>
+                  <p class="error-message email-error">incorrect email</p>
+                </div>
+                <div class="input-field">
+                  <span class="icon"><ion-icon name="lock-closed-outline"></ion-icon></span>
+                  <input type="password" name="password" required />
+                  <label for="password" class="password">Password</label>
+                  <p class="error-message pass-error">Incorrect Password</p>
+                </div>
+                <div>
+                  <!-- <input type="checkbox" name="" id=""> -->
+                  <a href="#" class="pass-recover">Forgot password?</a>
+                  <p class="wrong-pass"></p>
+                </div>
+              
+                <button type="button" class="login-btn btn">Register</button>
+                <button type="button" class="login-google-btn btn">
+                  Register with Google
+                </button>
+              </form>
+            </div>
+
+            <!-- FORM--4 -->
+            <div class="sign-up-form company sign-in-form-4 sign-up hidden fm">
+              <form class="sign-in-form sign-in-form--company" action="#">
+                <div class="form-header">
+                  <h2 class="login-header">Sign Up</h2>
+                  <p class="login-subtext">Please enter your details</p>
+                </div>
+
+                <div class="input-field">
+                  <span class="icon"><ion-icon name="person-add-outline"></ion-icon></span>
+                  <input type="text" name="name" required />
+                  <label for="name" class="name">Company Name</label>
+                  <p class="error-message name-error"></p>
+                </div>
+                <div class="input-field">
+                  <span class="icon"><ion-icon name="mail-outline"></ion-icon></span>
+                  <input type="email" required />
+                  <label for="email" class="email">Email</label>
+                  <p class="error-message email-error">incorrect email</p>
+                </div>
+                <div class="input-field">
+                  <span class="icon"><ion-icon name="lock-closed-outline"></ion-icon></span>
+                  <input type="password" name="password" required />
+                  <label for="password" class="password">Password</label>
+                  <p class="error-message pass-error">Incorrect Password</p>
+                </div>
+                <div>
+                  <!-- <input type="checkbox" name="" id=""> -->
+                  <a href="#" class="pass-recover">Forgot password?</a>
+                  <p class="wrong-pass"></p>
+                </div>
+              
+                <button type="button" class="login-btn btn">Register</button>
+                <button type="button" class="login-google-btn btn">
+                  Register with Google
+                </button>
+              </form>
+            </div>
+          </div>
+          
+          <div class="sign-in-box">
+            <p class="sign-in-text">
+              Don't have an account?
+            </p>
+            <button class="sign-in-link">Sign up</button>
+          </div>
+        </div>
+      </div>
+      <!-- EMPLOYEE PROFILE -->
+
+      <div class="profile1 hidden">
+        <section class="container">
+          <div class="container-head">
+            <h2 class="form-head">Registration form</h2>
+            <span class="sub-form-head">please fill in the following informations to complete your registration</span>
+          </div>
+          <form action="#" class="form">
+            <div class="general-box">
+              <h3 class="section-title">General Information</h3>
+              <div class="column">
+
+                <div class="input-box">
+                <label for="name">Full name</label>
+                <input type="text" name="name" id="name" placeholder="Enter full name" required />
+              </div>
+              <div class="input-box">
+                <label for="birth-data">Date of Birth</label>
+                <input type="date" name="birth-data" id="birth-date" placeholder="20/09/1998" >
+              </div>
+            </div>
+  
+              <div class="column">
+                <div class="input-box">
+                  <label for="select-gender">Gender</label>
+                  <select name="select-gender" required>
+                    <option value="">Choose your gender</option>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                    <option value="others">Others</option>
+                  </select>
+                </div>
+                <div class="input-box">
+                  <label for="select-status">Marital Status</label>
+                  <select id="select-status" name="select-status" required>
+                    <option value="">Status</option>
+                    <option value="male">Single</option>
+                    <option value="female">Married</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+
+            <!-- Contact box -->
+            <div class="contact-box">
+              <h3 class="section-title">Contact Information</h3>
+              <div class="column">
+                <div class="input-box">
+                  <label for="phone-number">Phone number</label>
+                  <input type="tel" name="phone-number" placeholder="Enter phone number" required >
+                </div>
+                <div class="input-box">
+                  <label for="name">Email</label>
+                  <input type="email" name="email" placeholder="Enter email address"  required >
+                </div>
+                <div class="input-box">
+                  <label for="select-city">City</label>
+                  <select name="select-city" required>
+                    <option value="">please choose your city</option>
+                    <option value="yaounde">Yaounde</option>
+                    <option value="douala">Douala</option>
+                    <option value="buea">Buea</option>
+                    <option value="bamenda">Bamenda</option>
+                  </select>
+                </div>
+              </div>
+
+              <!-- Quater box -->
+              <div class="column">
+                <div class="input-box">
+                  <label for="quater-name">Quater</label>
+                  <input type="text" name="quater-name" placeholder="Enter quater" >
+                </div>
+                <div class="input-box">
+                  <label for="first-address">Address</label>
+                  <input type="text" name="first-address" id="first-address" placeholder="Enter street address" required >
+                </div>
+                <div class="input-box">
+                  <label for="second-address">Address 2</label>
+                  <input type="text" name="second-address" id="second-address" placeholder="Enter street address line 2" required >
+                </div>
+              </div>
+            </div>
+
+            <!-- Education Level -->
+            <div class="education-box">
+              <h3 class="section-title">Education Details</h3>
+              <div class="column">
+                <div class="input-box">
+                  <label for="education-level">University/College</label>
+                  <input type="text" name="education-level" id="education-level" required >
+                </div>
+                <div class="input-box">
+                  <label for="degree">Degree/Certification</label>
+                  <input type="text" name="degree"  id="degree" />
+                </div>
+                <div class="input-box">
+                  <label for="select-level">Level</label>
+                  <select id="select-level" name="select-level" required>
+                    <option value="">Select</option>
+                    <option value="level-1">Level-1</option>
+                    <option value="level-2">Level-2</option>
+                    <option value="level-3">Level-3</option>
+                    <option value="level-4">Level-4</option>
+                  </select>
+                </div>
+              </div>
+              <div class="input-box">
+                <label for="addition-info">Additional Info</label>
+                <textarea name="addition-info"></textarea>
+              </div>              
+            </div>
+
+            <div class="submit-box">
+              <input type="submit" value="Submit" class="submit-btn">
+            </div>
+          </form>
+        </section>
+    </div>
+
+    <!-- COMPANY'S PROFILE -->
+    <div class="profile2 hidden">
+      <section class="container">
+        <div class="container-head">
+          <h2 class="form-head">Registration form</h2>
+          <span class="sub-form-head">please fill in the following informations to complete your registration</span>
+        </div>
+        <form action="#" class="form">
+          <div class="input-box">
+            <label for="company-name">Company Name</label>
+            <input type="text" name="company-name" id="company-name" placeholder="Enter Your companies name" required />
+          </div>
+          <div class="column">
+            <div class="input-box">
+              <label for="job-type">Job Type</label>
+              <select id="job-type" name="job-type" required>
+                <option value="">Job Type</option>
+                <option value="part-time">Part Time</option>
+                <option value="full-time">Full Time</option>
+                <option value="internship">Internship</option>
+                <option value="others">Others</option>
+              </select>
+            </div>
+            <div class="input-box">
+              <label for="job-caterogy">Job Caterogy</label>
+              <select name="select-gender" required>
+                <option value="">Caterogy</option>
+                <option value="data-analyst">Data Analyst</option>
+                <option value="web-developer">Web-Peveloper</option>
+                <option value="graphics designer">Graphics Designer</option>
+                <option value="mobile-app-developer">Mobile App Developer</option>
+                <option value="others">Others</option>
+              </select>
+            </div>
+          </div>
+          <div class="column">
+            <div class="input-box">
+              <label for="select-city">City</label>
+              <select name="select-city" required>
+                <option value="">please choose your city</option>
+                <option value="yaounde">Yaounde</option>
+                <option value="douala">Douala</option>
+                <option value="buea">Buea</option>
+                <option value="bamenda">Bamenda</option>
+              </select>
+            </div>
+            <div class="input-box">
+              <label for="quater-name">Quater</label>
+              <input type="text" name="quater-name" placeholder="Enter quater" >
+            </div>
+          </div>
+          <div class="column">
+            <div class="input-box">
+              <label for="name">Email Address</label>
+              <input type="email" name="email" placeholder="Enter email address"  required >
+            </div>
+            <div class="input-box">
+              <label for="phone-number">Phone number</label>
+              <input type="tel" name="phone-number" placeholder="Enter phone number" required >
+            </div>
+          </div>
+          <div class="input-box">
+            <label for="website">Website</label>
+            <input type="text" name="website" id="website" placeholder="https://www.google.com" >
+          </div>
+          <div class="input-box">
+            <label for="company-description">Company-Description</label>
+            <textarea name="addition-info"></textarea>
+          </div> 
+
+          <div class="submit-box">
+            <input type="submit" value="Submit" class="submit-btn">
+          </div>
+        </form>
+      </section>
+  </div>
+  <div class="popup" id="popup">
+    <img src="" alt="">
+    <h2>Thank You!</h2>
+    <p>Your details has been successfully submitted. Thanks!</p>
+    <button type="button" onclick="closePopup()">OK</button>
+  </div>
+
+    <script src="login.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+  </body>
+</html>
