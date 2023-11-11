@@ -12,11 +12,6 @@ const InternSchema = new mongoose.Schema(
       required : true,
       unique : true
     },
-    isVerified: {
-        type: Boolean,
-        default: false,
-        required: true,
-      },
     fullName: {
       type: String,
       required: true,
@@ -24,10 +19,6 @@ const InternSchema = new mongoose.Schema(
     phoneNumber: {
       type: String,
       required : true
-    },
-    profile : {
-      type: String,
-      // required: true,
     }
   },
   { timestamps: true }
