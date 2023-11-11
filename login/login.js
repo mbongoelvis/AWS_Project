@@ -68,8 +68,9 @@ function closePopup(){
 }
 
 const hideCurrentForm = function() {
-  containerLoginForm.classList.add("hidden");
+  // containerLoginForm.classList.add("hidden");
   containerLogin.style.height = "";
+  window.location = "./userAndCompanies/usersPage.html"
   openPopup();
 }
 
@@ -281,3 +282,7 @@ btnSignIn.addEventListener("click", function (e) {
   // console.log(btnSignIn.textContent);
   // console.log(signInform1.classList);
 });
+
+
+
+export {}

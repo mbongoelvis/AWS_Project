@@ -1,7 +1,7 @@
 const lenis = new Lenis();
 
 lenis.on("scroll", (e) => {
-  // console.log(e);
+  console.log(e);
 });
 
 function raf(time) {
@@ -119,7 +119,7 @@ try {
         let dataCombine = "";
         totaldata.forEach((post) => {
           dataCombine += `
-                  <div class="rounded-xl bg-primary p-3 my-4">
+                  <div class="rounded-xl bg-primary p-3 mt-4">
               <!-- card profile -->
               <div class="flex justify-between w-full">
                 <div class="flex gap-3">
@@ -146,14 +146,21 @@ try {
               <!-- likes, share and comment -->
               <div class="flex">
                 <!-- likes -->
-                <div class="w-full flex justify-center cursor-pointer hover:bg-gray-300 dark:hover:bg-gray-800 h-12 items-center gap-2 transition-all ease-linear rounded-md">
+                <div class="w-full flex justify-center cursor-pointer hover:bg-gray-800 h-12 items-center gap-2 transition-all ease-linear rounded-md">
                   <span class="material-symbols-outlined">
                       thumb_up
                   </span>
                   <span>${post.likes}</span>
                 </div>
+                <!-- comment -->
+                <div class="w-full flex justify-center cursor-pointer items-center gap-2 transition-all ease-linear hover:bg-gray-800 h-12 rounded-md">
+                  <span class="material-symbols-outlined">
+                    chat_bubble
+                  </span>
+                  <span>${post.comments}</span>
+                </div>
                 <!-- share -->
-                <div class="w-full flex justify-center cursor-pointer h-12 items-center gap-2 transition-all ease-linear hover:bg-gray-300 dark:hover:bg-gray-800 rounded-md">
+                <div class="w-full flex justify-center cursor-pointer h-12 items-center gap-2 transition-all ease-linear hover:bg-gray-800 rounded-md">
                   <span class="material-symbols-outlined">
                       share
                   </span>
