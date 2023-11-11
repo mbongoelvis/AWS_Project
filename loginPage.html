@@ -13,7 +13,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="styles.css" />
+    <!-- linking general style -->
+    <link rel="stylesheet" href="./login/styles.css" />
 
     <title>Login</title>
   </head>
@@ -22,44 +23,44 @@
       <div class="login-form">
         <div class="login-img-box">
           <h2 class="title">InternHive</h2>
-          <img class="login-img" src="images/alexis-chloe-TYDkKEgc0Fg-unsplash-removebg-preview.png" alt="a girl wearing a blouse" />
+          <img class="login-img" src="./login/images/alexis-chloe-TYDkKEgc0Fg-unsplash-removebg-preview.png" alt="a girl wearing a blouse" />
 
           <div class="card card--1">
             <div class="card-img">
-              <img src="images/customer-1.jpeg" alt="man face">
+              <img src="./login/images/customer-1.jpeg" alt="man face">
             </div>
             <div class="card-content">
               <h3>Mbongo Elvis</h3>
               <p>Software Engineer</p>
             </div>
             <div class="icon-img">
-              <img src="images/Icon.png" alt="icon">
+              <img src="./login/images/Icon.png" alt="icon">
             </div>
           </div>
 
           <div class="card card--2">
             <div class="card-img">
-              <img src="images/customer-2.jpeg" alt="man face">
+              <img src="./login/images/customer-2.jpeg" alt="man face">
             </div>
             <div class="card-content">
               <h3>Gracious</h3>
               <p>Software Engineer</p>
             </div>
             <div class="icon-img">
-              <img src="images/Icon.png" alt="icon">
+              <img src="./login/images/Icon.png" alt="icon">
             </div>
           </div>
 
           <div class="card card--3">
             <div class="card-img">
-              <img src="images/customer-3.jpeg" alt="man face">
+              <img src="./login/images/customer-3.jpeg" alt="man face">
             </div>
             <div class="card-content">
               <h3>Tah Blaise</h3>
               <p>Software Engineer</p>
             </div>
             <div class="icon-img">
-              <img src="images/Icon.png" alt="icon">
+              <img src="./login/images/Icon.png" alt="icon">
             </div>
           </div>
         </div>
@@ -384,13 +385,10 @@
           <div class="column">
             <div class="input-box">
               <label for="select-city">City</label>
-              <select name="select-city" required>
-                <option value="">please choose your city</option>
-                <option value="yaounde">Yaounde</option>
-                <option value="douala">Douala</option>
-                <option value="buea">Buea</option>
-                <option value="bamenda">Bamenda</option>
-              </select>
+              <div class="input-box">
+              <label for="company-name">City</label>
+              <input type="text" name="company-name" id="company-name" placeholder="Enter Your city name" required />
+          </div>
             </div>
             <div class="input-box">
               <label for="quater-name">Quater</label>
@@ -429,7 +427,7 @@
     <button type="button" onclick="closePopup()">OK</button>
   </div>
 
-    <script src="login.js"></script>
+    <script src="./login/login.js"></script>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
   </body>
