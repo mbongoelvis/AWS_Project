@@ -1,3 +1,4 @@
+
 const EmployeesAccounts = [
   {
     owner: "Jonas Schmedtmann",
@@ -59,19 +60,19 @@ function animRemoveImage() {
   imgLoginForm.classList.remove("animate");
 }
 
-function openPopup(){
-  popup.classList.add("open-popup");
-}
+// function openPopup(){
+//   popup.classList.add("open-popup");
+// }
 
-function closePopup(){
-  popup.classList.remove("open-popup");
-}
+
+
+// function closePopup(){
+//   popup.classList.remove("open-popup");
+// }
 
 const hideCurrentForm = function() {
   // containerLoginForm.classList.add("hidden");
-  containerLogin.style.height = "";
-  window.location = "./userAndCompanies/usersPage.html"
-  openPopup();
+  containerLogin.style.alignItems = "start"
 }
 
 function animDisplayForms(elem) {
@@ -104,6 +105,16 @@ function animDisplayForms(elem) {
     inputPaswordChild.value = '';
   }
 
+  function emailErrorBackground(){
+    labelEmailChild.style.backgroundColor = "#eee";
+    labelEmailChild.style.padding = "1.2rem 3.2rem";
+  }
+
+  function passwordErrorBackground(){
+    labelPaswordChild.style.backgroundColor = "#eee";
+    labelPaswordChild.style.padding = "1.2rem 3.2rem";
+  }
+
   btnLoginChild.addEventListener("click", function () {
     const currentAccount = btnEmployee.classList.contains("active-btn")
       ? EmployeesAccounts.find((acc) => acc.email === inputEmailChild.value)
@@ -120,8 +131,8 @@ function animDisplayForms(elem) {
           if (currentAccount.password === Number(inputPaswordChild.value)) {
             console.log(`This is ${currentAccount.owner}'s account`);
             // labelLoginHeaderChild.textContent = "Login Successful";
-            hideCurrentForm()
-            individualsPofile.classList.remove("hidden");
+            // hideCurrentForm()
+            window.location = "userAndCompanies/usersPage.html";
           } else {
             console.log("Incorrect password");
             labelPaswordChild.textContent = "Incorrect password";
@@ -148,6 +159,7 @@ function animDisplayForms(elem) {
             changeSignUpMessage();
             signInBox.style.display = 'none';
             signInCategoryBox.style.display = 'none';
+            window.location = "login/employee-profile.html";
           } else {
             console.log("This password already exist");
             labelPaswordChild.textContent = "This password already exist";
@@ -169,9 +181,8 @@ function animDisplayForms(elem) {
           if (currentAccount.password === Number(inputPaswordChild.value)) {
             console.log(`This is ${currentAccount.owner}'s account`);
             // labelLoginHeaderChild.textContent = "Login Successful";
-            hideCurrentForm();
-            companiesPofile.classList.remove("hidden");
-          } else {
+            // hideCurrentForm();
+            window.location = "userAndCompanies/companyPage.html";          } else {
             console.log("Incorrect password");
             labelPaswordChild.textContent = "Incorrect password";
             labelPaswordChild.style.color = "#B30000";
@@ -194,6 +205,7 @@ function animDisplayForms(elem) {
               password: Number(inputPaswordChild.value),
             });
             console.log(CompaniesAccounts);
+            window.location = "login/company-profile.html";
             changeSignUpMessage();
             signInBox.style.display = 'none';
           } else {
@@ -282,7 +294,3 @@ btnSignIn.addEventListener("click", function (e) {
   // console.log(btnSignIn.textContent);
   // console.log(signInform1.classList);
 });
-
-
-
-export {}

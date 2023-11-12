@@ -146,7 +146,7 @@ try {
               <!-- likes, share and comment -->
               <div class="flex">
                 <!-- likes -->
-                <div class="w-full flex justify-center cursor-pointer hover:bg-gray-300 dark:hover:bg-gray-800 h-12 items-center gap-2 transition-all ease-linear rounded-md">
+                <div class="w-full flex justify-center cursor-pointer hover:bg-gray-300 dark:hover:bg-gray-800 h-12 items-center gap-2 transition-all ease-linear rounded-md hover:text-white">
                   <span class="material-symbols-outlined">
                       thumb_up
                   </span>

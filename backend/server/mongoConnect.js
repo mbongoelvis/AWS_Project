@@ -8,10 +8,9 @@ module.exports = async function connection() {
       useUnifiedTopology: true,
     };
 
-    const ConnectionString =
+    const ConnectionString ="mongodb+srv://princecadstudios:Prince_mongo@cluster0.0t2phst.mongodb.net/?retryWrites=true&w=majority"
       // "mongodb+srv://jordan:jordan123@cluster0.mjdyolp.mongodb.net/interHive"||
-      process.env.mongodbURI;
-
+      // process.env.mongodbURI;
     await mongoose.connect(ConnectionString, connection_params);
     console.log(`succesfully connected to the database`);
   } catch (error) {

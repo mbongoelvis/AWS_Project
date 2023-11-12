@@ -1,6 +1,6 @@
 const express = require("express");
 const app = express();
-const PORT = 5000 || process.env.PORT;
+const PORT = 3000 || process.env.PORT;
 
 // const http = require("http");
 // const server = http.createServer(app);
@@ -35,7 +35,6 @@ app.use(express.json()); //just as body parser
 app.use(helmet()); //help securing the request send
 app.use(cors()); //for cross platform request
 app.use(morgan("common")); //send in the console the detail about the request you did
-
 
 
 /*******************************

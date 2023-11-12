@@ -71,7 +71,9 @@ body {
 /* ********************* */
 /* HEADER */
 /* ********************* */
-
+body{
+  background-color: rgb(3, 3, 3);
+}
 .main-header {
   display: flex;
   justify-content: space-between;
@@ -105,23 +107,24 @@ body {
 /* ********************* */
 
 .login-container {
-  width: 100%;
+  width: 100%; 
   height: 100vh;
-  background-color: #fefcff;
+  background-color: #0a0a0a;
+  padding: 2rem;
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
 }
 
 .login-form {
-  width: 80rem;
-  min-height: 50rem;
+  width: 60%;
+  height: 70rem; 
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 0 5px rgba(16, 16, 16, 0.4);
   border-radius: 9px;
   transition: all 0.2s;
-  /* align-self: self-start; */
+  background-color: rgb(31, 31, 31);
 }
 
 .login-img-box {
@@ -137,7 +140,7 @@ body {
 }
 
 .login-img-box .login-img {
-  width: 80%;
+  width: 70%;
   position: absolute;
   left: -62px;
   bottom: 0;
@@ -175,7 +178,7 @@ body {
 
 .card-content h3 {
   color: var(--main-color);
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   font-weight: bold;
   margin-bottom: 2px;
 }
@@ -220,13 +223,6 @@ body {
   border: none;
   padding: 1.8rem 3.2rem;
 }
-
-.employer-btn {
-}
-
-.company-btn {
-}
-
 .active-btn {
   background: var(--main-color);
   color: #fff;
@@ -308,9 +304,9 @@ body {
   top: -8px;
 } */
 
-.input-field .error-message {
+.error-message {
   font-size: 1.4rem;
-  margin-top: 1rem;
+  margin-top: -1rem;
   margin-bottom: 1rem;
 }
 
@@ -319,7 +315,7 @@ body {
   font-size: 1.2rem;
 }
 
-.pass-recover:hover{
+.pass-recover:hover {
   color: var(--main-color);
 }
 
@@ -327,6 +323,7 @@ body {
   display: flex;
   flex-direction: column;
   gap: 2rem;
+  /* background-color: red; */
 }
 
 .login-form .btn {
@@ -350,6 +347,7 @@ body {
   font-size: 1.2rem;
   margin-top: 2rem;
   display: inline-block;
+  color: #fff;
 }
 
 .sign-in-link {
@@ -366,7 +364,7 @@ body {
 /* FINISHING REGISTRATION */
 
 .container {
-  font-family: "Poppins", sans-serif;
+  /* font-family: "Poppins", sans-serif; */
   position: relative;
   max-width: 1300px;
   width: 100%;
@@ -375,20 +373,31 @@ body {
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
 }
 
-.container .container-head{
+.container-2 {
+}
+
+.profile1, .profile2{
+  width: 120rem;
+  margin: 2rem auto;
+}
+
+.container .container-head,
+.container-2 .container-head {
   position: relative;
   text-align: center;
   margin-bottom: 4rem;
 }
 
-.container .container-head h2 {
+.container .container-head h2,
+.container-2 .container-head h2 {
   font-size: 3rem;
   color: #333;
   font-weight: 600;
   margin-bottom: 0.5rem;
 }
 
-.container .container-head span {
+.container .container-head span,
+.container-2 .container-head span {
   font-size: 1.5rem;
   color: #9e9ea7;
 }
@@ -402,13 +411,19 @@ body {
   background-color: #5a14ff;
 } */
 
-.container .form {
+.container .form,
+.container-2 .form {
   margin-top: 30px;
 }
 
 .form .input-box {
   width: 100%;
   margin-top: 20px;
+}
+
+input{
+  background-color: transparent;
+  color: #fff;
 }
 
 .input-box label {
@@ -431,7 +446,7 @@ body {
   padding: 0 15px;
 }
 
-.form .input-box textarea{
+.form .input-box textarea {
   height: 100px;
 }
 
@@ -468,7 +483,7 @@ body {
   font-size: 1.6rem;
 }
 
-.submit-box{
+.submit-box {
   text-align: right;
   margin-top: 4rem;
 }
@@ -489,7 +504,7 @@ body {
 }
 
 .popup {
-  width: 400px;
+  width: 450px;
   background: #fff;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
   border-radius: 6px;
@@ -504,7 +519,7 @@ body {
   transition: transform 0.4s, top 0.4s;
 }
 
-.open-popup{
+.open-popup {
   visibility: visible;
   top: 50%;
   transform: translate(-50%, -50%) scale(1);
@@ -514,21 +529,21 @@ body {
   width: 100px;
   margin-top: -50px;
   border-radius: 50%;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2)
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
-.popup h2{
+.popup h2 {
   font-size: 3.8rem;
   font-weight: 500;
   margin: 30px 0 10px;
 }
 
-.popup p{
+.popup p {
   font-size: 1.6rem;
   line-height: 1.2;
 }
 
-.popup button{
+.popup button {
   width: 100%;
   margin-top: 50px;
   padding: 10px 0;
@@ -539,23 +554,25 @@ body {
   font-size: 18px;
   border-radius: 4px;
   cursor: pointer;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2)
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
-
 /* Responsiveness */
-@media screen and (max-width: 700px) {
-  .login-form{
+@media screen and (max-width: 950px) {
+  .login-container{
+    width: 95%;
+  }
+  .login-form {
     grid-template-columns: 1fr;
+  }
+  .login-img-box{
+    display: none;
   }
 }
 
 @media screen and (max-width: 500px) {
   .form .column {
     flex-wrap: wrap;
-  }
-  .form :where(.gender-option, .gender) {
-    row-gap: 15px;
   }
 }
 

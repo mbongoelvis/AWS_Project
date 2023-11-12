@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Company Profile</title>
+
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- COMPANY'S PROFILE -->
+    <section class="container-2">
+      <div class="profile2">
+        <div class="container-head">
+          <h2 class="form-head">Registration form</h2>
+          <span class="sub-form-head"
+            >please fill in the following informations to complete your
+            registration</span
+          >
+        </div>
+        <form action="#" class="form">
+          <div class="input-box">
+            <label for="company-name">Company Name</label>
+            <input
+              type="text"
+              name="company-name"
+              id="company-name"
+              placeholder="Enter Your companies name"
+              required
+            />
+          </div>
+          <div class="column">
+            <div class="input-box">
+              <label for="job-type">Job Type</label>
+              <select id="job-type" name="job-type" required>
+                <option value="">Job Type</option>
+                <option value="part-time">Part Time</option>
+                <option value="full-time">Full Time</option>
+                <option value="internship">Internship</option>
+                <option value="others">Others</option>
+              </select>
+            </div>
+            <div class="input-box">
+              <label for="job-caterogy">Job Caterogy</label>
+              <select name="select-gender" required>
+                <option value="">Caterogy</option>
+                <option value="data-analyst">Data Analyst</option>
+                <option value="web-developer">Web-Peveloper</option>
+                <option value="graphics designer">Graphics Designer</option>
+                <option value="mobile-app-developer">
+                  Mobile App Developer
+                </option>
+                <option value="others">Others</option>
+              </select>
+            </div>
+          </div>
+          <div class="column">
+            <div class="input-box">
+              <label for="select-city">City</label>
+              <select name="select-city" required>
+                <option value="">please choose your city</option>
+                <option value="yaounde">Yaounde</option>
+                <option value="douala">Douala</option>
+                <option value="buea">Buea</option>
+                <option value="bamenda">Bamenda</option>
+              </select>
+            </div>
+            <div class="input-box">
+              <label for="quater-name">Quater</label>
+              <input
+                type="text"
+                name="quater-name"
+                placeholder="Enter quater"
+              />
+            </div>
+          </div>
+          <div class="column">
+            <div class="input-box">
+              <label for="name">Email Address</label>
+              <input
+                type="email"
+                name="email"
+                placeholder="Enter email address"
+                required
+              />
+            </div>
+            <div class="input-box">
+              <label for="phone-number">Phone number</label>
+              <input
+                type="tel"
+                name="phone-number"
+                placeholder="Enter phone number"
+                required
+              />
+            </div>
+          </div>
+          <div class="input-box">
+            <label for="website">Website</label>
+            <input
+              type="text"
+              name="website"
+              id="website"
+              placeholder="https://www.google.com"
+            />
+          </div>
+          <div class="input-box">
+            <label for="company-description">Company-Description</label>
+            <textarea name="addition-info"></textarea>
+          </div>
+
+          <div class="submit-box">
+            <input type="submit" value="Submit" class="submit-btn" />
+          </div>
+        </form>
+      </div>
+    </section>
+  </body>
+</html>
