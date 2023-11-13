@@ -1,0 +1,26 @@
+[
+    {
+        "id": 1,
+        "companyName": "Tech-Tours-cmp",
+        "jobType": "Internship",
+        "jobCategory": "Data Analyst",
+        "city": "Douala",
+        "quater": "Bonabery",
+        "email": "tecttours400@gmail.com",
+        "phoneNumber": 678583636,
+        "webside": "https://www.tecttorssmp.com",
+        "companyDescription": "We are specialised in data analysis services and also take students for internship"
+    },
+    {
+        "id": 2,
+        "companyName": "TechSolutions",
+        "jobType": "FullTime",
+        "jobCategory": "Web developement",
+        "city": "Buea",
+        "quater": "milingo junction",
+        "email": "tectsolutions404@gmail.com",
+        "phoneNumber": 675836363,
+        "webside": "https://www.techsolutions.com",
+        "companyDescription": "We are specialised in web developement services and also take students for internship"
+    }
+]

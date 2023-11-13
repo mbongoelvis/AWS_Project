@@ -4,30 +4,30 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Employee Profile</title>
-    
-    <link rel="stylesheet" href="styles.css">
+
+    <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-      <!-- EMPLOYEE PROFILE -->
+    <!-- EMPLOYEE PROFILE -->
     <section class="container-2">
       <div class="profile1">
-          <div class="container-head">
-            <h2 class="form-head">Registration form</h2>
+        <div class="container-head">
+          <h2 class="form-head">Registration form</h2>
           <span class="sub-form-head"
             >please fill in the following informations to complete your
             registration</span
           >
         </div>
-        <form action="#" class="form">
+        <form id="employeeForm" action="#" class="form">
           <div class="general-box">
             <h3 class="section-title">General Information</h3>
             <div class="column">
               <div class="input-box">
-                <label for="name">Full name</label>
+                <label for="fullName">Full name</label>
                 <input
                   type="text"
-                  name="name"
-                  id="name"
+                  class="name"
+                  name="fullName"
                   placeholder="Enter full name"
                   required
                 />
@@ -37,7 +37,7 @@
                 <input
                   type="date"
                   name="birth-data"
-                  id="birth-date"
+                  class="birth-date"
                   placeholder="20/09/1998"
                 />
               </div>
@@ -46,7 +46,7 @@
             <div class="column">
               <div class="input-box">
                 <label for="select-gender">Gender</label>
-                <select name="select-gender" required>
+                <select class="select-gender" name="select-gender" required>
                   <option value="">Choose your gender</option>
                   <option value="male">Male</option>
                   <option value="female">Female</option>
@@ -55,7 +55,7 @@
               </div>
               <div class="input-box">
                 <label for="select-status">Marital Status</label>
-                <select id="select-status" name="select-status" required>
+                <select class="select-status" name="select-status" required>
                   <option value="">Status</option>
                   <option value="male">Single</option>
                   <option value="female">Married</option>
@@ -72,6 +72,7 @@
                 <label for="phone-number">Phone number</label>
                 <input
                   type="tel"
+                  class="phone-number"
                   name="phone-number"
                   placeholder="Enter phone number"
                   required
@@ -81,20 +82,21 @@
                 <label for="name">Email</label>
                 <input
                   type="email"
+                  class="email"
                   name="email"
                   placeholder="Enter email address"
                   required
                 />
               </div>
               <div class="input-box">
-                <label for="select-city">City</label>
-                <select name="select-city" required>
-                  <option value="">please choose your city</option>
-                  <option value="yaounde">Yaounde</option>
-                  <option value="douala">Douala</option>
-                  <option value="buea">Buea</option>
-                  <option value="bamenda">Bamenda</option>
-                </select>
+                <label for="city">City</label>
+                <input
+                  type="text"
+                  name="city"
+                  class="city"
+                  placeholder="Enter Your city"
+                  required
+                />
               </div>
             </div>
 
@@ -104,6 +106,7 @@
                 <label for="quater-name">Quater</label>
                 <input
                   type="text"
+                  class="quater-name"
                   name="quater-name"
                   placeholder="Enter quater"
                 />
@@ -112,8 +115,8 @@
                 <label for="first-address">Address</label>
                 <input
                   type="text"
+                  class="first-address"
                   name="first-address"
-                  id="first-address"
                   placeholder="Enter street address"
                   required
                 />
@@ -122,10 +125,9 @@
                 <label for="second-address">Address 2</label>
                 <input
                   type="text"
+                  class="second-address"
                   name="second-address"
-                  id="second-address"
                   placeholder="Enter street address line 2"
-                  required
                 />
               </div>
             </div>
@@ -139,18 +141,17 @@
                 <label for="education-level">University/College</label>
                 <input
                   type="text"
+                  class="education-level"
                   name="education-level"
-                  id="education-level"
-                  required
                 />
               </div>
               <div class="input-box">
                 <label for="degree">Degree/Certification</label>
-                <input type="text" name="degree" id="degree" />
+                <input class="degree" type="text" name="degree" id="degree" />
               </div>
               <div class="input-box">
                 <label for="select-level">Level</label>
-                <select id="select-level" name="select-level" required>
+                <select class="select-level" name="select-level" required>
                   <option value="">Select</option>
                   <option value="level-1">Level-1</option>
                   <option value="level-2">Level-2</option>
@@ -160,16 +161,95 @@
               </div>
             </div>
             <div class="input-box">
-              <label for="addition-info">Additional Info</label>
+              <label class="addition-info" for="addition-info"
+                >Additional Info</label
+              >
               <textarea name="addition-info"></textarea>
             </div>
           </div>
-          
+
           <div class="submit-box">
             <input type="submit" value="Submit" class="submit-btn" />
           </div>
         </form>
       </div>
     </section>
+
+    <script src="jQuery.js"></script>
+    <script>
+      // btnSubmit.addEventListener("click", function () {});
+
+      $(document).ready(function () {
+        // Handle form submission
+        $("#employeeForm").submit(function (e) {
+          e.preventDefault(); // Prevent default form submission
+
+          // Get form input values
+          var fullName = $(".name").val();
+          var dateOfBirth = $(".birth-date").val();
+          var gender = $(".select-gender").val();
+          var maritalStatus = $(".select-status").val();
+          var phoneNumber = $(".phone-number").val();
+          var email = $(".email").val();
+          var city = $(".city").val();
+          var quater = $(".quater-name").val();
+          var address = $(".first-address").val();
+          var address2 = $(".second-address").val();
+          var university = $(".education-level").val();
+          var degree = $(".degree").val();
+          var level = $(".select-level").val();
+          var additionalInfo = $(".addition-info").val();
+
+          // Create an object with the form data
+          var formData = {
+            fullName: fullName,
+            dateOfBirth: dateOfBirth,
+            gender: gender,
+            maritalStatus: maritalStatus,
+            phoneNumber: Number(phoneNumber),
+            email: email,
+            city: city,
+            quater: quater,
+            address: address,
+            address2: address2,
+            university: university,
+            degree: degree,
+            level: level,
+            additionalInfo: additionalInfo,
+          };
+
+          // Read the existing JSON file (sample data)
+          var jsonData = [
+            {
+              fullName: "Jonas Schmedtmann",
+              dateOfBirth: "07/20/1998",
+              gender: "Male",
+              maritalStatus: "Married",
+              phoneNumber: 654877745,
+              email: "jonasschedtman@gmail.com",
+              city: "Buea",
+              quater: "mile 16",
+              address: "mile 16 Buea",
+              address2: "maligo juction Buea",
+              university: "university of buea",
+              degree: "advance level",
+              level: "level-2",
+              additionalInfo:
+                "I study software engineering at the university of Buea have goood communication skills and I'm very hard working as well as coding exercises",
+            },
+          ];
+
+          // Add the new object to the array
+          jsonData.push(formData);
+
+          // Convert the array back to JSON
+          // var jsonResult = JSON.stringify(jsonData);
+
+          // Log the updated JSON data
+          console.log(jsonData);
+          window.location = "../userAndCompanies/usersPage.html";
+        });
+      });
+    </script>
   </body>
 </html>

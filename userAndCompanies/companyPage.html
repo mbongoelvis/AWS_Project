@@ -32,6 +32,62 @@
       /* For Chrome, Safari, and Opera */
 
     </style>
+    <style>
+      .popup {
+        width: 450px;
+        background: #fff;
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+        border-radius: 6px;
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translate(-50%, -50%) scale(0.1);
+        text-align: center;
+        padding: 0 30px 30px;
+        color: #333;
+        visibility: hidden;
+        transition: transform 0.4s, top 0.4s;
+      }
+      
+      .open-popup {
+        visibility: visible;
+        top: 50%;
+        transform: translate(-50%, -50%) scale(1);
+      }
+      
+      .popup img {
+        width: 100px;
+        margin-top: -50px;
+        border-radius: 50%;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+      }
+      
+      .popup h2 {
+        font-size: 3.8rem;
+        font-weight: 500;
+        margin: 30px 0 10px;
+      }
+      
+      .popup p {
+        font-size: 1.6rem;
+        line-height: 1.2;
+      }
+      
+      .popup button {
+        width: 100%;
+        margin-top: 50px;
+        padding: 10px 0;
+        background: #8349ff;
+        color: #fff;
+        border: none;
+        outline: none;
+        font-size: 18px;
+        border-radius: 4px;
+        cursor: pointer;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+      }
+
+    </style>
   </head>
   <body class="w-full bg-secondary relative">
     
@@ -390,9 +446,29 @@
         </span>
       </div>
     </div>
+
+    <div class="popup" id="popup">
+      <img src="" alt="" />
+      <h2>Congratulatioins👏</h2>
+      <p>Your have successfully login into your acount!</p>
+      <button type="button" onclick="closePopup()">OK</button>
+    </div>
     <!-- Dont try to change the path of this script file because anything that happens to this project is your fault -->
     <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.27/bundled/lenis.min.js"></script> 
     <script src="../script/script.js"></script>
+    <script>
+      function openPopup(){
+        popup.classList.add("open-popup");
+      }
+
+      function closePopup(){
+        popup.classList.remove("open-popup");
+      }
+      
+      setTimeout(() => {
+        openPopup();
+      })
+    </script>
     
   </body>
 </html>
