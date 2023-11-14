@@ -279,7 +279,7 @@ body{
   /* top: -12px; */
   top: 40%;
   left: 0;
-  transform: translateY(-50%);
+  transform: translateY(-30%);
   pointer-events: none;
   transition: 0.5s;
 }
@@ -288,7 +288,7 @@ body{
 .input-field input:valid ~ label {
   top: -5px;
   color: var(--main-color);
-  /* background-color: transparent; */
+  background-color: transparent;
 }
 
 .input-field input {
@@ -298,11 +298,12 @@ body{
   outline: none;
   border: none;
   border-bottom: 1px solid #9e9ea7;
+  background-color: transparent;
 }
 
-/* .input-field input:focus ~ label {
-  top: -8px;
-} */
+.input-field input:focus {
+  background-color: transparent;
+}
 
 .error-message {
   font-size: 1.4rem;
