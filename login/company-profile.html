@@ -18,13 +18,13 @@
             registration</span
           >
         </div>
-        <form action="#" class="form">
+        <form id="companysForm" action="#" class="form">
           <div class="input-box">
             <label for="company-name">Company Name</label>
             <input
               type="text"
               name="company-name"
-              id="company-name"
+              class="company-name"
               placeholder="Enter Your companies name"
               required
             />
@@ -32,7 +32,7 @@
           <div class="column">
             <div class="input-box">
               <label for="job-type">Job Type</label>
-              <select id="job-type" name="job-type" required>
+              <select class="job-type" name="job-type" required>
                 <option value="">Job Type</option>
                 <option value="part-time">Part Time</option>
                 <option value="full-time">Full Time</option>
@@ -42,7 +42,7 @@
             </div>
             <div class="input-box">
               <label for="job-caterogy">Job Caterogy</label>
-              <select name="select-gender" required>
+              <select class="job-caterogy" name="select-gender" required>
                 <option value="">Caterogy</option>
                 <option value="data-analyst">Data Analyst</option>
                 <option value="web-developer">Web-Peveloper</option>
@@ -57,18 +57,19 @@
           <div class="column">
             <div class="input-box">
               <label for="select-city">City</label>
-              <select name="select-city" required>
-                <option value="">please choose your city</option>
-                <option value="yaounde">Yaounde</option>
-                <option value="douala">Douala</option>
-                <option value="buea">Buea</option>
-                <option value="bamenda">Bamenda</option>
-              </select>
+              <input
+              type="text"
+              name="city"
+              class="city"
+              placeholder="Enter Your city"
+              required
+            />
             </div>
             <div class="input-box">
               <label for="quater-name">Quater</label>
               <input
                 type="text"
+                class="quater-name"
                 name="quater-name"
                 placeholder="Enter quater"
               />
@@ -79,6 +80,7 @@
               <label for="name">Email Address</label>
               <input
                 type="email"
+                class="email"
                 name="email"
                 placeholder="Enter email address"
                 required
@@ -88,6 +90,7 @@
               <label for="phone-number">Phone number</label>
               <input
                 type="tel"
+                class="phone-number"
                 name="phone-number"
                 placeholder="Enter phone number"
                 required
@@ -98,21 +101,86 @@
             <label for="website">Website</label>
             <input
               type="text"
+              class="website"
               name="website"
-              id="website"
               placeholder="https://www.google.com"
             />
           </div>
           <div class="input-box">
             <label for="company-description">Company-Description</label>
-            <textarea name="addition-info"></textarea>
+            <textarea class="addition-info" name="addition-info"></textarea>
           </div>
 
           <div class="submit-box">
-            <input type="submit" value="Submit" class="submit-btn" />
+            <input type="submit"  value="Submit" class="submit-btn" />
           </div>
         </form>
       </div>
     </section>
+
+    <script src="jQuery.js"></script>
+    <script>
+      $(document).ready(function () {
+        // Handle form submission
+        $("#companysForm").submit(function (e) {
+          e.preventDefault(); // Prevent default form submission
+
+          // Get form input values
+          var companyName = $(".company-name").val();
+          var jobType = $(".job-type").val();
+          var jobCategory = $(".job-caterogy").val();
+          var city = $(".city").val();
+          var quater = $(".quater-name").val();
+          var email = $(".email").val();
+          var phoneNumber = $(".phone-number").val();
+          var webside = $(".website").val();
+          var companyDescription = $(".addition-info").val();
+
+          // Create an object with the form data
+          var formData = {
+            companyName: companyName,
+            jobType: jobType,
+            jobCategory: jobCategory,
+            city: city,
+            quater: quater,
+            email: email,
+            phoneNumber: Number(phoneNumber),
+            webside: webside,
+            companyDescription: companyDescription,
+          };
+
+          // Read the existing JSON file (sample data)
+          var jsonData = [
+            {
+              fullName: "Jonas Schmedtmann",
+              dateOfBirth: "07/20/1998",
+              gender: "Male",
+              maritalStatus: "Married",
+              phoneNumber: 654877745,
+              email: "jonasschedtman@gmail.com",
+              city: "Buea",
+              quater: "mile 16",
+              address: "mile 16 Buea",
+              address2: "maligo juction Buea",
+              university: "university of buea",
+              degree: "advance level",
+              level: "level-2",
+              additionalInfo:
+                "I study software engineering at the university of Buea have goood communication skills and I'm very hard working as well as coding exercises",
+            },
+          ];
+
+          // Add the new object to the array
+          jsonData.push(formData);
+
+          // Convert the array back to JSON
+          // var jsonResult = JSON.stringify(jsonData);
+
+          console.log(jsonData);
+          window.location = "../userAndCompanies/companyPage.html";  
+          // Log the updated JSON data
+        });
+      });
+    </script>
   </body>
 </html>

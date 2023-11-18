@@ -279,7 +279,7 @@ body{
   /* top: -12px; */
   top: 40%;
   left: 0;
-  transform: translateY(-50%);
+  transform: translateY(-30%);
   pointer-events: none;
   transition: 0.5s;
 }
@@ -288,7 +288,7 @@ body{
 .input-field input:valid ~ label {
   top: -5px;
   color: var(--main-color);
-  /* background-color: transparent; */
+  background-color: transparent;
 }
 
 .input-field input {
@@ -298,11 +298,12 @@ body{
   outline: none;
   border: none;
   border-bottom: 1px solid #9e9ea7;
+  background-color: transparent;
 }
 
-/* .input-field input:focus ~ label {
-  top: -8px;
-} */
+.input-field input:focus {
+  background-color: transparent;
+}
 
 .error-message {
   font-size: 1.4rem;
@@ -374,11 +375,13 @@ body{
 }
 
 .container-2 {
+  max-width: 120rem;
+  margin: 2rem auto;
 }
 
 .profile1, .profile2{
-  width: 120rem;
-  margin: 2rem auto;
+  width: 100%;
+  padding: 0 1rem;
 }
 
 .container .container-head,
@@ -391,7 +394,8 @@ body{
 .container .container-head h2,
 .container-2 .container-head h2 {
   font-size: 3rem;
-  color: #333;
+  /* color: #333; */
+  color: #fff;
   font-weight: 600;
   margin-bottom: 0.5rem;
 }
@@ -422,12 +426,11 @@ body{
 }
 
 input{
-  background-color: transparent;
   color: #fff;
 }
 
 .input-box label {
-  color: #333;
+  color: #fff;
   font-size: 1.6rem;
 }
 
@@ -439,11 +442,18 @@ input{
   width: 100%;
   outline: none;
   font-size: 1.6rem;
-  color: #707070;
+  color: #fff;
   margin-top: 8px;
   border: 1px solid #ddd;
   border-radius: 6px;
   padding: 0 15px;
+  background-color: transparent;
+}
+
+.form .input-box select {
+  color: #707070;
+  background-color: black;
+  color: #fff;
 }
 
 .form .input-box textarea {
@@ -456,7 +466,8 @@ input{
 }
 
 .section-title {
-  color: #343a40;
+  /* color: #343a40; */
+  color: #9e9ea7;
   font-size: 2.2rem;
   font-weight: 400;
   margin-top: 4rem;
