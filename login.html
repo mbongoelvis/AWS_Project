@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login Page</title>
+    <link rel="stylesheet" href="./login/login.css" />
+    <!-- font from google you need to be online for this to take effect -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <div class="wrapper">
+        <div class="left"></div>
+        <div class="right">
+          <h1>LogIn</h1>
+          <!-- switch bottons -->
+          <div class="switch-btns">
+            <button class="active switch individual">Individual</button>
+            <button class="switch company">Company</button>
+          </div>
+          <form action="#" class="loginform">
+            <div>
+              <label for="email" class="emailLabel">Enter email</label>
+              <div>
+                <input
+                  type="text"
+                  required
+                  placeholder="Enter your email"
+                  class="user-email"
+                />
+              </div>
+            </div>
+            <div>
+              <label for="password" class="passwordLabel">Enter password</label>
+              <div>
+                <input
+                  type="password"
+                  required
+                  placeholder="Enter your password (6 char min)"
+                  class="user-password"
+                />
+              </div>
+            </div>
+            <!-- fogot password -->
+            <a href="#">Forgot password</a>
+            <button>Login</button>
+            <button>Login with google</button>
+            <p>
+              Dont have an Account?
+              <a href="./userAndCompanies/signup.html">Sign up</a>
+            </p>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <script src="./login/userAndCompanyLogin.js"></script>
+  </body>
+</html>
