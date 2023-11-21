@@ -64,7 +64,7 @@ emailInput.addEventListener("input", () => {
 passwordInput.addEventListener("input", () => {
   const userType = passwordInput.dataset.userType;
   console.log(`User type: ${userType}`);
-  console.log(emailInput.value);
+  console.log(passwordInput.value);
   if (passwordInput.value.length < 6) {
     passwordInput.style.border = "1px solid red";
   } else {
@@ -73,6 +73,44 @@ passwordInput.addEventListener("input", () => {
   }
 });
 
-register.addEventListener("submit", () => {
-  
-})
+register.addEventListener("submit", (e) => {
+  e.preventDefault();
+  if (
+    emailInput.dataset.userType == "company" &&
+    passwordInput.dataset.userType == "company"
+  ) {
+    window.location = "../login/company-profile.html";
+  }
+  if (
+    emailInput.dataset.userType == "user" &&
+    passwordInput.dataset.userType == "user"
+  ) {
+    window.location = "../login/employee-profile.html";
+  }
+});
+
+// distructuring the email and password value
+const SignUpData = {
+  email: emailInput,
+  password: passwordInput,
+  // fullName: fullNameInput,
+  // phoneNumber: phoneNumberInput,
+};
+
+// sending the data to the database
+const registerUser = async () => {
+  try {
+    await fetch("http://localhost:3000/auth/", {
+      method: "POST",
+      body: JSON.stringify(SignUpData),
+      headers: {
+        "Content-Type": "application/json",
+      },
+    }).then(user => {
+      alert("Successfull created user")
+    }
+    );
+  } catch (err) {
+    alert("Can't register user")
+  }
+}
