@@ -8,6 +8,9 @@ const passwordLabel = document.querySelector(".passwordLabel2");
 const emailInput = document.querySelector(".user-email2");
 const passwordInput = document.querySelector(".user-password2");
 
+// register button
+const register = document.querySelector(".register");
+
 // Email matching regular expression
 const regex = /@gmail\.com$/;
 
@@ -49,6 +52,7 @@ switchBtn2.forEach((btn) => {
 emailInput.addEventListener("input", () => {
   const userType = emailInput.dataset.userTypeSignupEmail;
   console.log(`User type: ${userType}`);
+  console.log(emailInput.value);
   if (!regex.test(emailInput.value)) {
     emailInput.style.border = "1px solid red";
   } else {
@@ -60,6 +64,7 @@ emailInput.addEventListener("input", () => {
 passwordInput.addEventListener("input", () => {
   const userType = passwordInput.dataset.userType;
   console.log(`User type: ${userType}`);
+  console.log(emailInput.value);
   if (passwordInput.value.length < 6) {
     passwordInput.style.border = "1px solid red";
   } else {
@@ -67,3 +72,7 @@ passwordInput.addEventListener("input", () => {
     passwordInput.style.borderBottom = "1px solid rgba(128, 128, 128, 0.82)";
   }
 });
+
+register.addEventListener("submit", () => {
+  
+})
