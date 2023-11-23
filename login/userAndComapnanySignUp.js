@@ -5,8 +5,8 @@ const emailLabel = document.querySelector(".emailLabel2");
 const passwordLabel = document.querySelector(".passwordLabel2");
 
 // Change data entries for email and password
-const emailInput = document.querySelector(".user-email2");
-const passwordInput = document.querySelector(".user-password2");
+const emailInput = document.querySelector(".email2");
+const passwordInput = document.querySelector(".password2");
 
 // register button
 const register = document.querySelector(".register");
@@ -34,23 +34,23 @@ switchBtn2.forEach((btn) => {
       passwordLabel.textContent = "Enter password";
       emailInput.value = "";
       passwordInput.value = "";
-      emailInput.dataset.userTypeSignupEmail = "user";
-      passwordInput.dataset.userTypeSignupPassword = "user";
+      emailInput.dataset.Signup = "user";
+      passwordInput.dataset.Signup = "user";
     } else if (btn.classList.contains("company")) {
       console.log("The company button was clicked");
       emailLabel.textContent = "Company email";
       passwordLabel.textContent = "Company password";
       emailInput.value = "";
       passwordInput.value = "";
-      emailInput.dataset.userTypeSignupEmail = "company";
-      passwordInput.dataset.userTypeSignupPassword = "company";
+      emailInput.dataset.Signup = "company";
+      passwordInput.dataset.Signup = "company";
     }
   });
 });
 
 // Event handlers for email and password inputs
 emailInput.addEventListener("input", () => {
-  const userType = emailInput.dataset.userTypeSignupEmail;
+  const userType = emailInput.dataset.Signup
   console.log(`User type: ${userType}`);
   console.log(emailInput.value);
   if (!regex.test(emailInput.value)) {
@@ -62,7 +62,7 @@ emailInput.addEventListener("input", () => {
 });
 
 passwordInput.addEventListener("input", () => {
-  const userType = passwordInput.dataset.userType;
+  const userType = passwordInput.dataset.Signup;
   console.log(`User type: ${userType}`);
   console.log(passwordInput.value);
   if (passwordInput.value.length < 6) {
@@ -76,16 +76,16 @@ passwordInput.addEventListener("input", () => {
 register.addEventListener("submit", (e) => {
   e.preventDefault();
   if (
-    emailInput.dataset.userType == "company" &&
-    passwordInput.dataset.userType == "company"
+    emailInput.dataset.Signup == "company" &&
+    passwordInput.dataset.Signup == "company"
   ) {
-    window.location = "../login/company-profile.html";
+    window.location = "./company-profile.html";
   }
   if (
-    emailInput.dataset.userType == "user" &&
-    passwordInput.dataset.userType == "user"
+    emailInput.dataset.Signup == "user" &&
+    passwordInput.dataset.Signup == "user"
   ) {
-    window.location = "../login/employee-profile.html";
+    window.location = "../userAndCompanies/companyPage.html";
   }
 });
 
@@ -98,19 +98,19 @@ const SignUpData = {
 };
 
 // sending the data to the database
-const registerUser = async () => {
-  try {
-    await fetch("http://localhost:3000/auth/", {
-      method: "POST",
-      body: JSON.stringify(SignUpData),
-      headers: {
-        "Content-Type": "application/json",
-      },
-    }).then(user => {
-      alert("Successfull created user")
-    }
-    );
-  } catch (err) {
-    alert("Can't register user")
-  }
-}
+// const registerUser = async () => {
+//   try {
+//     await fetch("http://localhost:3000/auth/", {
+//       method: "POST",
+//       body: JSON.stringify(SignUpData),
+//       headers: {
+//         "Content-Type": "application/json",
+//       },
+//     }).then(user => {
+//       alert("Successfull created user")
+//     }
+//     );
+//   } catch (err) {
+//     alert("Can't register user")
+//   }
+// }
