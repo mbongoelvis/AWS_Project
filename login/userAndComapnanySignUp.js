@@ -75,27 +75,21 @@ passwordInput.addEventListener("input", () => {
 
 register.addEventListener("submit", (e) => {
   e.preventDefault();
-  if (
-    emailInput.dataset.Signup == "company" &&
-    passwordInput.dataset.Signup == "company"
-  ) {
-    window.location = "./company-profile.html";
+  if (emailInput.dataset.Signup == "company") {
+    window.location = "../routes/company-profile.html";
   }
-  if (
-    emailInput.dataset.Signup == "user" &&
-    passwordInput.dataset.Signup == "user"
-  ) {
-    window.location = "../userAndCompanies/companyPage.html";
+  if (emailInput.dataset.Signup == "user") {
+    window.location = "../routes/employee-profile.html";
   }
 });
 
 // distructuring the email and password value
-const SignUpData = {
-  email: emailInput,
-  password: passwordInput,
-  // fullName: fullNameInput,
-  // phoneNumber: phoneNumberInput,
-};
+// const SignUpData = {
+//   email: emailInput,
+//   password: passwordInput,
+//   // fullName: fullNameInput,
+//   // phoneNumber: phoneNumberInput,
+// };
 
 // sending the data to the database
 // const registerUser = async () => {
