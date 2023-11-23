@@ -1,5 +1,6 @@
 const Company = require("../models/company");
 const bcrypt = require("bcrypt")
+
 const CreateCompany = async (req, res) => {
   const hashPassword = await bcrypt.hash(req.body.password, 10);
 

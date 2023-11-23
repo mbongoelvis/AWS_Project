@@ -1,0 +1,21 @@
+1. Create an intern|student : localhost:3000/auth/intern/[POST] + [SchemaBody]
+2. Delete an intern|student : localhost:3000/intern/:id[DELETE]
+2. Update an intern|student : localhost:3000/intern/:id[PUT]
+3. Get an intern|student : localhost:3000/intern/:id[GET]
+4. Get All interns|students : localhost:3000/intern/[GET]
+
+
+1. Create a company : localhost:3000/auth/company/[POST] + [SchemaBody]
+2. Delete a company : localhost:3000/company/:id[DELETE]
+2. Update a company : localhost:3000/company/:id[PUT]
+3. Get a company : localhost:3000/company/:id[GET]
+4. Get All companies: localhost:3000/company/[GET]
+
+
+1. Create a post : localhost:3000/auth/post/[POST] + [SchemaBody]
+2. Delete a post : localhost:3000/post/:id[DELETE]
+3. Get a post : localhost:3000/post/:id[GET]
+4. Get All post: localhost:3000/company/[GET]
+
+Authentication | intern : localhost:3000/auth/login[POST] + [SchemaBody]
+Authentication | company : localhost:3000/auth/login/company[POST] + [SchemaBody]

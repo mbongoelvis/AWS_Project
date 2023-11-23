@@ -1,6 +1,8 @@
 const Intern = require("../models/intern");
 const bcrypt = require("bcrypt");
 
+
+
 //updated a Intern
 const updateIntern = async (req, res) => {
     if (req.body.password) {

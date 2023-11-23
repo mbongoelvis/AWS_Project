@@ -16,6 +16,7 @@ const cors = require("cors");
 
 const authRoutes = require("./routes/auth");
 const internRoutes = require("./routes/intern");
+const postRoutes = require("./routes/post");
 const companyRoutes = require("./routes/company");
 const applicationRoutes = require("./routes/application");
 
@@ -37,12 +38,12 @@ app.use(cors()); //for cross platform request
 app.use(morgan("common")); //send in the console the detail about the request you did
 
 
-
 /*******************************
  ******** Musing the routes  ***
  ********************************/
 app.use("/auth", authRoutes);
 app.use("/intern", internRoutes);
+app.use("/post", postRoutes);
 app.use("/company", companyRoutes);
 app.use("/application", applicationRoutes);
 
