@@ -14,6 +14,12 @@ const register = document.querySelector(".register");
 // Email matching regular expression
 const regex = /@gmail\.com$/;
 
+// getting users information from the DOM
+const fullName = document.querySelector(".fullname");
+const phoneNumber = document.querySelector(".phone-number")
+const submitInfo = document.querySelector(".submit-btn")
+
+
 // Removing the active class
 const removeActive = () => {
   switchBtn2.forEach((individualBtn) => {
@@ -82,29 +88,3 @@ register.addEventListener("submit", (e) => {
     window.location = "../routes/employee-profile.html";
   }
 });
-
-// distructuring the email and password value
-// const SignUpData = {
-//   email: emailInput,
-//   password: passwordInput,
-//   // fullName: fullNameInput,
-//   // phoneNumber: phoneNumberInput,
-// };
-
-// sending the data to the database
-// const registerUser = async () => {
-//   try {
-//     await fetch("http://localhost:3000/auth/", {
-//       method: "POST",
-//       body: JSON.stringify(SignUpData),
-//       headers: {
-//         "Content-Type": "application/json",
-//       },
-//     }).then(user => {
-//       alert("Successfull created user")
-//     }
-//     );
-//   } catch (err) {
-//     alert("Can't register user")
-//   }
-// }
