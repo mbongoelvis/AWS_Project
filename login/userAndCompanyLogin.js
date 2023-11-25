@@ -74,17 +74,102 @@ passwordInput.addEventListener("input", () => {
 // submitting the form
 form.addEventListener("submit", (e) => {
   e.preventDefault();
-  if (
-    emailInput.dataset.userType == "company" &&
-    passwordInput.dataset.userType == "company"
-  ) {
-    
-    window.location = "../userAndCompanies/companyPage.html";
+  if (emailInput.dataset.userType == "company") {
+    // creating user to the database
+    var myHeaders = new Headers();
+    myHeaders.append("Content-Type", "application/json");
+
+    var raw = JSON.stringify({
+      password: passwordInput.value,
+      email: emailInput.value,
+    });
+
+    var requestOptions = {
+      method: "POST",
+      headers: myHeaders,
+      body: raw,
+      redirect: "follow",
+    };
+
+    // fetch("http://13.246.40.149:3000/auth/login", requestOptions)
+    //   .then((response) => {
+    //     if (response.ok) {
+    //       return response.text();
+    //     } else {
+    //       throw new Error("Invalid credentials");
+    //     }
+    //   })
+    //   .then((result) => {
+    //     console.log(data);
+    //     if (!data.error && data.email === "aws@gmail.com") {
+    //       window.location = "../userAndCompanies/companyPage.html";
+    //     } else {
+
+    //     }
+    //   })
+    //   .catch((error) => {
+    //     console.log(error.message);
+    //     // Handle the error and prevent the redirect
+    //   });
+    fetch("http://13.246.40.149:3000/auth/company/login", requestOptions)
+      .then((response) => {
+        if (response.ok) {
+          return response.json(); // Parse the response as JSON
+        } else {
+          throw new Error("Invalid credentials");
+        }
+      })
+      .then((data) => {
+        console.log(data);
+        if (!data.error && data.email === emailInput.value) {
+          console.log("Redirecting...");
+          window.location.href = "../userAndCompanies/companyPage.html";
+        } else {
+          console.log("Account not found. Redirect not performed.");
+          alert("Account not found, try again");
+        }
+      })
+      .catch((error) => {
+        console.log(error.message);
+        // Handle the error and prevent the redirect
+      });
   }
-  if (
-    emailInput.dataset.userType == "user" &&
-    passwordInput.dataset.userType == "user"
-  ) {
-    window.location = "../userAndCompanies/usersPage.html";
+  if (emailInput.dataset.userType == "user") {
+    // creating user to the database
+    var myHeaders = new Headers();
+    myHeaders.append("Content-Type", "application/json");
+
+    var raw = JSON.stringify({
+      password: passwordInput.value,
+      email: emailInput.value,
+    });
+
+    var requestOptions = {
+      method: "POST",
+      headers: myHeaders,
+      body: raw,
+      redirect: "follow",
+    };
+
+    fetch("http://13.246.40.149:3000/auth/login", requestOptions)
+      .then((response) => {
+        if (response.ok) {
+          return response.text();
+        } else {
+          throw new Error("Invalid credentials");
+        }
+      })
+      .then((result) => {
+        console.log(result);
+        if (!data.error && data.email === emailInput.value) {
+          window.location.href = "../userAndCompanies/usersPage.html";
+        } else {
+          alert("Account not found, try again");
+        }
+      })
+      .catch((error) => {
+        console.log(error.message);
+        // Handle the error and prevent the redirect
+      });
   }
 });

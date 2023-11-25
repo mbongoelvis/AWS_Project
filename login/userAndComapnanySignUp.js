@@ -3,10 +3,15 @@ const switchBtn2 = document.querySelectorAll(".switchbtn");
 // Getting labels
 const emailLabel = document.querySelector(".emailLabel2");
 const passwordLabel = document.querySelector(".passwordLabel2");
+const nameLabel = document.querySelector(".nameLabel")
+const numberLabel = document.querySelector(".numberLabel")
 
 // Change data entries for email and password
 const emailInput = document.querySelector(".email2");
 const passwordInput = document.querySelector(".password2");
+const fullName = document.querySelector(".fullName");
+const phoneNumber = document.querySelector(".phoneNumber");
+const submitInfo = document.querySelector(".submit-btn");
 
 // register button
 const register = document.querySelector(".register");
@@ -14,10 +19,6 @@ const register = document.querySelector(".register");
 // Email matching regular expression
 const regex = /@gmail\.com$/;
 
-// getting users information from the DOM
-const fullName = document.querySelector(".fullname");
-const phoneNumber = document.querySelector(".phone-number")
-const submitInfo = document.querySelector(".submit-btn")
 
 
 // Removing the active class
@@ -38,21 +39,35 @@ switchBtn2.forEach((btn) => {
       console.log("The client button was clicked");
       emailLabel.textContent = "Enter email";
       passwordLabel.textContent = "Enter password";
+      nameLabel.textContent = "Enter your full name";
+      numberLabel.textContent = "Enter your number";
       emailInput.value = "";
       passwordInput.value = "";
+      phoneNumber.value = "";
+      fullName.value = "";
       emailInput.dataset.Signup = "user";
       passwordInput.dataset.Signup = "user";
+      phoneNumber.dataset.Signup = "user";
+      fullName.dataset.Signup = "user";
     } else if (btn.classList.contains("company")) {
       console.log("The company button was clicked");
       emailLabel.textContent = "Company email";
       passwordLabel.textContent = "Company password";
+      nameLabel.textContent = "Enter Company name";
+      numberLabel.textContent = "Enter Company number";
       emailInput.value = "";
       passwordInput.value = "";
+      phoneNumber.value = "";
+      fullName.value = "";
       emailInput.dataset.Signup = "company";
       passwordInput.dataset.Signup = "company";
+      phoneNumber.dataset.Signup = "company";
+      fullName.dataset.Signup = "company";
     }
   });
 });
+
+
 
 // Event handlers for email and password inputs
 emailInput.addEventListener("input", () => {
@@ -82,9 +97,62 @@ passwordInput.addEventListener("input", () => {
 register.addEventListener("submit", (e) => {
   e.preventDefault();
   if (emailInput.dataset.Signup == "company") {
-    window.location = "../routes/company-profile.html";
+    // creating user to the database
+    var raw = JSON.stringify({
+      password: passwordInput.value,
+      email: emailInput.value,
+      isVerified: false,
+      companyName: fullName.value,
+    });
+
+    const registerUser = async () => {
+      var myHeaders = new Headers();
+      myHeaders.append("Content-Type", "application/json");
+
+      var requestOptions = {
+        method: "POST",
+        headers: myHeaders,
+        body: raw,
+        redirect: "follow",
+      };
+
+      fetch("http://13.246.40.149:3000/company/", requestOptions)
+        .then((response) => response.text())
+        .then((result) => {
+          alert("Company Account created successfully! Login now");
+        })
+        .catch((error) => alert("Account creation failed maybe account already exists"));
+    };
+    registerUser();
   }
   if (emailInput.dataset.Signup == "user") {
-    window.location = "../routes/employee-profile.html";
+    // creating user to the database
+    var raw = JSON.stringify({
+      password: passwordInput.value,
+      email: emailInput.value,
+      fullName: fullName.value,
+      phoneNumber: phoneNumber.value,
+    });
+
+    const registerUser = async () => {
+      var myHeaders = new Headers();
+      myHeaders.append("Content-Type", "application/json");
+
+      var requestOptions = {
+        method: "POST",
+        headers: myHeaders,
+        body: raw,
+        redirect: "follow",
+      };
+
+      fetch("http://13.246.40.149:3000/auth/intern/", requestOptions)
+        .then((response) => response.text())
+        .then((result) => {
+          alert("Student Account created successfully")
+        })
+        .catch((error) => alert("Account creation failed maybe account already exists"));
+    };
+    registerUser()
+
   }
 });
