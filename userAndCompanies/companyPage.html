@@ -232,20 +232,20 @@
         </div>
 
         <!-- ============= pop up for creating post ================ -->
-        <form class="create-post w-full hidden h-screen bg-gray-800/60 backdrop-blur-sm absolute inset-0 items-center justify-center transition-all ease z-40">
+        <div class="create-post w-full hidden h-screen bg-gray-800/60 backdrop-blur-sm absolute inset-0 items-center justify-center transition-all ease z-40">
           <form class="bg-white w-[80%] md:w-[70%] lg:w-[50%] p-6 rounded-xl post-form">
             <h3 class="text-center font-bold text-xl mb-5">Create post</h3>
             <div>
               <label class="block font-bold text-gray-600 text-lg">Description</label>
-              <textarea name="post-description" cols="30" rows="10" placeholder="Enter post description" class="border border-gray-600 rounded-lg w-full mb-3 p-2 outline-none"></textarea>
+              <textarea name="post-description" cols="30" rows="10" placeholder="Enter post description" class="border border-gray-600 rounded-lg w-full mb-3 p-2 outline-none post-text"></textarea>
             </div>
-            <input type="file">
+            <input type="file" class="post-pic">
             <div class="w-full flex justify-between mt-4">
-              <button class="text-gray-600 text-lg close-post">cancle</button>
+              <p class="text-gray-600 text-lg close-post cursor-pointer">cancle</p>
               <button class="py-2 px-6 bg-red-600 text-white font-bold rounded-lg">post</button>
             </div>
           </form>
-        </form>
+        </div>
     </nav>
 
 
