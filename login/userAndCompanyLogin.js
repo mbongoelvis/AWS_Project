@@ -1,5 +1,4 @@
 const switchBtn = document.querySelectorAll(".switch");
-
 // Getting labels
 const emailLabel = document.querySelector(".emailLabel");
 const passwordLabel = document.querySelector(".passwordLabel");
@@ -23,6 +22,8 @@ const removeActive = () => {
   });
 };
 
+let companyName;
+ let userName;
 // Adding event listeners for the buttons
 switchBtn.forEach((btn) => {
   btn.addEventListener("click", (e) => {
@@ -71,6 +72,8 @@ passwordInput.addEventListener("input", () => {
   }
 });
 
+
+
 // submitting the form
 form.addEventListener("submit", (e) => {
   e.preventDefault();
@@ -91,30 +94,11 @@ form.addEventListener("submit", (e) => {
       redirect: "follow",
     };
 
-    // fetch("http://13.246.40.149:3000/auth/login", requestOptions)
-    //   .then((response) => {
-    //     if (response.ok) {
-    //       return response.text();
-    //     } else {
-    //       throw new Error("Invalid credentials");
-    //     }
-    //   })
-    //   .then((result) => {
-    //     console.log(data);
-    //     if (!data.error && data.email === "aws@gmail.com") {
-    //       window.location = "../userAndCompanies/companyPage.html";
-    //     } else {
-
-    //     }
-    //   })
-    //   .catch((error) => {
-    //     console.log(error.message);
-    //     // Handle the error and prevent the redirect
-    //   });
     fetch("http://13.246.40.149:3000/auth/company/login", requestOptions)
       .then((response) => {
         if (response.ok) {
-          return response.json(); // Parse the response as JSON
+          return response.json();
+          // Parse the response as JSON
         } else {
           throw new Error("Invalid credentials");
         }
@@ -123,7 +107,10 @@ form.addEventListener("submit", (e) => {
         console.log(data);
         if (!data.error && data.email === emailInput.value) {
           console.log("Redirecting...");
-          window.location.href = "../userAndCompanies/companyPage.html";
+          companyName = data.name;
+          console.log(companyName);
+          sessionStorage.setItem("nameValue", companyName);
+          window.location = "../userAndCompanies/companyPage.html";
         } else {
           console.log("Account not found. Redirect not performed.");
           alert("Account not found, try again");
@@ -154,15 +141,18 @@ form.addEventListener("submit", (e) => {
     fetch("http://13.246.40.149:3000/auth/login", requestOptions)
       .then((response) => {
         if (response.ok) {
-          return response.text();
+          return response.json();
         } else {
           throw new Error("Invalid credentials");
         }
       })
       .then((result) => {
         console.log(result);
-        if (!data.error && data.email === emailInput.value) {
-          window.location.href = "../userAndCompanies/usersPage.html";
+        if (!result.error && result.email === emailInput.value) {
+          userName = result.name;
+          console.log(userName);
+          sessionStorage.setItem("nameValue", userName);
+          window.location = "../userAndCompanies/usersPage.html";
         } else {
           alert("Account not found, try again");
         }

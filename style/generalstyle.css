@@ -19,7 +19,7 @@ nav .active {
 } */
 
 .dropshadow {
-  box-shadow: 0 0 30px rgba(54, 54, 54, 0.935);
+  box-shadow: 0 0 30px rgb(224, 224, 224);
   transition: all 0.5s linear;
 }
 .color {

@@ -8,5 +8,21 @@
   },
   "dependencies": {
     "@loadingio/transition.css": "^3.0.0"
-  }
+  },
+  "name": "aws_project",
+  "type": "module",
+  "version": "1.0.0",
+  "main": "tailwind.config.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mbongoelvis/AWS_Project.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mbongoelvis/AWS_Project/issues"
+  },
+  "homepage": "https://github.com/mbongoelvis/AWS_Project#readme",
+  "description": ""
 }

@@ -26,6 +26,7 @@
     <link rel="stylesheet" href="../dist/output.css">
     <!-- loading library for transition -->
     <link rel="stylesheet" href="../node_modules/@loadingio/transition.css/transition.min.css">
+    <link rel="stylesheet" href="../style/generalstyle.css">
   </head>
   <body class="w-full bg-secondary relative">
     
@@ -36,24 +37,24 @@
           <img src="../images/logo.png" alt="logo" class="w-[8rem] cursor-pointer">
         </div>
         <div class=" w-[30rem] hidden lg:relative lg:flex gap-12 text-white">
-          <div class="btn active flex flex-col justify-center items-center w-full cursor-pointer">
+          <div class="btnurs active flex flex-col justify-center items-center w-full cursor-pointer">
             <span class="material-symbols-outlined"> home </span>
             <p>Home</p>
           </div>
-          <div div class="btn flex flex-col justify-center items-center w-full cursor-pointer">
+          <div div class="btnurs flex flex-col justify-center items-center w-full cursor-pointer">
             <span class="material-symbols-outlined"> work </span>
             <p>Internship</p>
           </div>
-          <div div class="btn light flex flex-col justify-center items-center h-full w-full cursor-pointer">
+          <div div class="btnurs light flex flex-col justify-center items-center h-full w-full cursor-pointer">
             <span class="material-symbols-outlined"> message</span>
             <p>Chat</p>
           </div>
-          <div div class="btn flex flex-col justify-center items-center w-full cursor-pointer relative noti">
+          <div div class="btnurs flex flex-col justify-center items-center w-full cursor-pointer relative noti">
             <span class="material-symbols-outlined"> notifications </span>
             <p>Notification</p>
 
             <!-- notification popo up -->
-            <div class="bg-primary h-[300px] w-[450px] absolute top-[3.5rem] rounded-lg p-4 hidden flex-col gap-3 overflow-scroll notification-card ld ld-bounce-in">
+            <div class="bg-primary h-[300px] w-[450px] absolute top-[3.5rem] rounded-lg p-4 hidden flex-col gap-3 overflow-scroll notification-card1 ld ld-bounce-in">
               <!-- individual notifications -->
              <div class="flex items-center justify-between bg-gray-700/30 p-3 rounded-xl">
                <div class="flex items-center gap-4">
@@ -118,11 +119,10 @@
           </div>
         </div>
         <div class="profile flex gap-3 items-center">
-          <!-- <button class="post-btn bg-white text-black px-4 py-2 rounded-3xl font-bold create-ps">Creat post</button> -->
           <img
             src="../images/domi.avif"
             alt=""
-            class="cursor-pointer openedit"
+            class="cursor-pointer openedit1"
             width="40px"
             height="40px"
             style="border-radius: 50%"
@@ -144,14 +144,14 @@
        <!-- =============== all pop ups ================= -->
         <!-- edit profile pop up -->
         <div class="edit w-full hidden h-screen bg-gray-700/60 backdrop-blur-sm absolute inset-0 items-center justify-center transition-all ease z-40">
-          <span class="material-symbols-outlined close-edit text-white text-[2.5rem] cursor-pointer absolute lg:right-[34rem] top-[7rem]">
+          <span class="material-symbols-outlined close-edit1 text-white text-[2.5rem] cursor-pointer absolute lg:right-[34rem] top-[7rem]">
             close
           </span>
           <form action="edit-profile" class="text-gray-700  min-w-[23rem] min-h-[60%] bg-white rounded-xl p-4 ld ld-bounce-in" >
             <p class="text-center font-bold text-2xl">Update info</p>
             <div>
               <label for="name" class="block mb-2 mt-5">Change username</label>
-              <input type="text" class="w-full border border-gray-400 outline-none h-[2.5rem] rounded pl-2 fields" name="name" id="name" placeholder="Enter user name" required>
+              <input type="text" class="w-full border border-gray-400 outline-none h-[2.5rem] rounded pl-2 fields1" name="name" id="name" placeholder="Enter user name" required>
             </div>
              <div>
               <label for="number" class="block mb-2 mt-5">Change town</label>
@@ -170,20 +170,7 @@
         </div>
 
         <!-- ============= pop up from post ================ -->
-        <div class="create-post w-full hidden h-screen bg-gray-800/60 backdrop-blur-sm absolute inset-0 items-center justify-center transition-all ease z-40">
-          <form class="bg-white w-[80%] md:w-[70%] lg:w-[50%] p-6 rounded-xl post-form">
-            <h3 class="text-center font-bold text-xl mb-5">Create post</h3>
-            <div>
-              <label class="block font-bold text-gray-600 text-lg">Description</label>
-              <textarea name="post-description" cols="30" rows="10" placeholder="Enter post description" class="border border-gray-600 rounded-lg w-full mb-3 p-2 outline-none"></textarea>
-            </div>
-            <input type="file">
-            <div class="w-full flex justify-between mt-4">
-              <button class="text-gray-600 text-lg close-post">cancle</button>
-              <button class="py-2 px-6 bg-red-600 text-white font-bold rounded-lg">post</button>
-            </div>
-          </form>
-        </div>
+       
     </nav>
 
 
@@ -199,19 +186,19 @@
               <div class="flex gap-2">
                 <img src="../images/domi.avif" alt="user image" class="w-12 rounded-3xl cursor-pointer">
                  <div>
-                <p class="text-white">Mbongo elvis</p>
+                <p class="text-white username">Mbongo elvis</p>
                 <p class="text-gray-600">Software engineer</p>
               </div>
               </div>
              <!-- more (the 3 dots) -->
               <div>
-                <span class="material-symbols-outlined cursor-pointer text-textcolor">
+                <span class="material-symbols-outlined cursor-pointer text-white">
                     more_horiz
                 </span>
               </div>
             </div>
             <!-- edit profile botton -->
-            <button class="mt-5 text-gray-500 hover:text-gray-200 transition-all openedit">Edit profile</button>
+            <button class="mt-5 text-gray-500 hover:text-gray-200 transition-all openedit1">Edit profile</button>
           </div>
           <!-- ads -->
           <p class="mt-10 sticky top-[16.2rem]">Suggestions</p>
@@ -220,7 +207,43 @@
             <div class="flex gap-2">
               <img src="../images/domi.avif" alt="" width="60px" class="rounded">
               <div>
-                <p>Orange Cameroon</p>
+                <p class="text-white">Orange Cameroon</p>
+              <p class="text-gray-600 text-sm">Telecom Company</p>
+              </div>
+            </div>
+            <span class="material-symbols-outlined cursor-pointer">
+                    more_horiz
+                </span>
+          </div>
+          <div class=" p-3 flex justify-between border-b border-gray-600">
+            <div class="flex gap-2">
+              <img src="../images/domi.avif" alt="" width="60px" class="rounded">
+              <div>
+                <p class="text-white">Orange Cameroon</p>
+              <p class="text-gray-600 text-sm">Telecom Company</p>
+              </div>
+            </div>
+            <span class="material-symbols-outlined cursor-pointer">
+                    more_horiz
+                </span>
+          </div>
+          <div class=" p-3 flex justify-between border-b border-gray-600">
+            <div class="flex gap-2">
+              <img src="../images/domi.avif" alt="" width="60px" class="rounded">
+              <div>
+                <p class="text-white">Orange Cameroon</p>
+              <p class="text-gray-600 text-sm">Telecom Company</p>
+              </div>
+            </div>
+            <span class="material-symbols-outlined cursor-pointer">
+                    more_horiz
+                </span>
+          </div>
+          <div class=" p-3 flex justify-between border-b border-gray-600">
+            <div class="flex gap-2">
+              <img src="../images/domi.avif" alt="" width="60px" class="rounded">
+              <div>
+                <p class="text-white">Orange Cameroon</p>
               <p class="text-gray-600 text-sm">Telecom Company</p>
               </div>
             </div>
@@ -251,16 +274,16 @@
         <!-- ===========right========= -->
         <div class="right hidden lg:flex lg:flex-col lg:col-span-3 left-side z-10">
          <div class=" bg-primary rounded-lg p-2 flex flex-col sticky top-[5rem] gap-5">
-          <h2 class="text-xl font-bold mb-5">Add to your feed</h2>
+          <h2 class="text-xl font-bold mb-5 text-white">Add to your feed</h2>
           <div class="w-full">
             <div class="px-4 flex gap-5">
               <div class="w-[50px] h-[50px] rounded-full overflow-hidden">
                 <img src="../images/post.webp" alt="" class="w-full h-full">
               </div>
               <div>
-                <p class="text-[16px] font-bold text-black">Food reserve factory</p>
+                <p class="text-[16px] font-bold text-white">Food reserve factory</p>
                 <p class="text-sm text-gray-500">Start up company in Duala</p>
-                <button class="px-7 py-[7px] border mt-4 rounded-[30px]"> + follow</button>
+                <button class="px-7 py-[7px] border mt-4 rounded-[30px] text-white"> + follow</button>
               </div>
             </div>
           </div>
@@ -271,9 +294,9 @@
                 <img src="../images/post.webp" alt="" class="w-full h-full">
               </div>
               <div>
-                <p class="text-[16px] font-bold">Food reserve factory</p>
+                <p class="text-[16px] font-bold text-white">Food reserve factory</p>
                 <p class="text-sm text-gray-500">Start up company in Duala</p>
-                <button class="px-7 py-[7px] border mt-4 rounded-[30px]"> + follow</button>
+                <button class="px-7 py-[7px] border mt-4 rounded-[30px] text-white"> + follow</button>
               </div>
             </div>
           </div>
@@ -284,9 +307,9 @@
                 <img src="../images/post.webp" alt="" class="w-full h-full">
               </div>
               <div>
-                <p class="text-[16px] font-bold">Food reserve factory</p>
+                <p class="text-[16px] font-bold text-white">Food reserve factory</p>
                 <p class="text-sm text-gray-500">Start up company in Duala</p>
-                <button class="px-7 py-[7px] border mt-4 rounded-[30px]"> + follow</button>
+                <button class="px-7 py-[7px] border mt-4 rounded-[30px] text-white"> + follow</button>
               </div>
             </div>
           </div>
@@ -297,9 +320,9 @@
                 <img src="../images/post.webp" alt="" class="w-full h-full">
               </div>
               <div>
-                <p class="text-[16px] font-bold">Food reserve factory</p>
+                <p class="text-[16px] font-bold text-white">Food reserve factory</p>
                 <p class="text-sm text-gray-500">Start up company in Duala</p>
-                <button class="px-7 py-[7px] border mt-4 rounded-[30px]"> + follow</button>
+                <button class="px-7 py-[7px] border mt-4 rounded-[30px] text-white"> + follow</button>
               </div>
             </div>
           </div>
@@ -311,7 +334,7 @@
 
   
       <!-- chat button -->
-      <div class="fixed bottom-[3rem] right-[3rem] bg-primary w-[4rem] h-[4rem] flex items-center justify-center rounded-[50%] cursor-pointer drop-shadow-lg shadow-blue-700  message">
+      <div class="fixed bottom-[3rem] right-[3rem] bg-primary w-[4rem] h-[4rem] flex items-center justify-center rounded-[50%] cursor-pointer drop-shadow-lg shadow-blue-700 message z-10">
         <span class="material-symbols-outlined text-white">
           mode_comment
         </span>
@@ -319,7 +342,8 @@
     </div>
     <!-- Dont try to change the path of this script file because anything that happens to this project is your fault -->
     <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.27/bundled/lenis.min.js"></script> 
-    <script src="./script/userscript.js"></script>
+    <script src="../script/userscript.js"></script>
+    <script src="../login/userAndCompanyLogin.js"></script>
     
   </body>
 </html>

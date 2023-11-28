@@ -32,6 +32,13 @@ const postdiv = document.querySelector(".create-post")
 const closepost = document.querySelector(".close-post")
 const postform = document.querySelector(".post-form")
 
+let userNameChange = sessionStorage.getItem("nameValue");
+// getting user infromation from the DOM
+let Companyname = document.querySelector(".companyname")
+  if (Companyname) {
+  Companyname.textContent = userNameChange;
+  }
+
 createPost.addEventListener("click", () => {
   if (postdiv.classList.contains("hidden")) {
     postdiv.classList.remove("hidden");
@@ -105,10 +112,10 @@ btn.forEach((btn) => {
   });
 });
 
-// === feting the data from the fake backend and displaying them ==
+// === feting the data from the fake backend and displaying them
 try {
   async function fetching() {
-    const data = await fetch("/data.json")
+    const data = await fetch("http://13.246.40.149:3000/post")
       .then((datas) => {
         return datas;
       })
@@ -127,8 +134,8 @@ try {
                     <img loading="lazy" src="${post.userImage}" class="object-cover w-full h-full">
                   </div>
                   <div>
-                    <p>${post.username}</p>
-                    <p class="text-gray-500">${post.postTime}</p>
+                    <p>${post.author}</p>
+                    <p class="text-gray-500">${post.createdAt}</p>
                   </div>
                 </div>
                 <span class="material-symbols-outlined cursor-pointer">
@@ -137,11 +144,11 @@ try {
               </div>
               <!-- post caption -->
               <div class="mt-3">
-                <p>${post.caption}</p>
+                <p>${post.content}</p>
               </div>
               <!-- post image -->
               <div class="max-h-[20rem] lg:max-h-[30rem] overflow-hidden rounded-lg my-5">
-              <img src="${post.postImage}" class="w-full h-full object-cover">
+              <img src="${post.picture}" class="w-full h-full object-cover">
               </div>
               <!-- likes, share and comment -->
               <div class="flex">
@@ -150,14 +157,14 @@ try {
                   <span class="material-symbols-outlined">
                       thumb_up
                   </span>
-                  <span>${post.likes}</span>
+                  <span>0</span>
                 </div>
                 <!-- share -->
                 <div class="w-full flex justify-center cursor-pointer h-12 items-center gap-2 transition-all ease-linear hover:bg-gray-300 dark:hover:bg-gray-800 rounded-md">
                   <span class="material-symbols-outlined">
                       share
                   </span>
-                  <span>${post.shares}</span>
+                  <span>0</span>
                 </div>
               </div>
             </div>
