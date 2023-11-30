@@ -81,7 +81,7 @@ btnurs.forEach((btn) => {
 // === feting the data from the fake backend and displaying them ==
 try {
   async function fetching() {
-    const data = await fetch("/data.json")
+    const data = await fetch("http://13.246.40.149:3000/post")
       .then((datas) => {
         return datas;
       })
@@ -100,8 +100,8 @@ try {
                     <img loading="lazy" src="${post.userImage}" class="object-cover w-full h-full">
                   </div>
                   <div>
-                    <p class="text-white">${post.username}</p>
-                    <p class="text-gray-500">${post.postTime}</p>
+                    <p class="text-white">${post.author}</p>
+                    <p class="text-gray-500">${post.createdAt}</p>
                   </div>
                 </div>
                 <span class="material-symbols-outlined cursor-pointer text-white">
@@ -110,11 +110,11 @@ try {
               </div>
               <!-- post caption -->
               <div class="mt-3">
-                <p class="text-white">${post.caption}</p>
+                <p class="text-white">${post.content}</p>
               </div>
               <!-- post image -->
               <div class="max-h-[20rem] lg:max-h-[30rem] overflow-hidden rounded-lg my-5">
-              <img src="${post.postImage}" class="w-full h-full object-cover">
+              <img src="${post.picture}" class="w-full h-full object-cover">
               </div>
               <!-- likes, share and comment -->
               <div class="flex">
@@ -123,21 +123,14 @@ try {
                   <span class="material-symbols-outlined text-white">
                       thumb_up
                   </span>
-                  <span class="text-white">${post.likes}</span>
-                </div>
-                <!-- comment -->
-                <div class="w-full flex justify-center cursor-pointer items-center gap-2 transition-all ease-linear hover:bg-gray-800 h-12 rounded-md">
-                  <span class="material-symbols-outlined text-white">
-                    chat_bubble
-                  </span>
-                  <span class="text-white">${post.comments}</span>
+                  <span class="text-white">0</span>
                 </div>
                 <!-- share -->
                 <div class="w-full flex justify-center cursor-pointer h-12 items-center gap-2 transition-all ease-linear hover:bg-gray-800 rounded-md">
                   <span class="material-symbols-outlined text-white">
                       share
                   </span>
-                  <span class="text-white">${post.shares}</span>
+                  <span class="text-white">0</span>
                 </div>
               </div>
             </div>
