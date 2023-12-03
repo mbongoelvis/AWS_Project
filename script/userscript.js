@@ -81,7 +81,7 @@ btnurs.forEach((btn) => {
 // === feting the data from the fake backend and displaying them ==
 try {
   async function fetching() {
-    const data = await fetch("http://13.246.40.149:3000/post")
+    const data = await fetch("http://107.20.63.132:3000/post")
       .then((datas) => {
         return datas;
       })

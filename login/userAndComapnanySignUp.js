@@ -116,12 +116,14 @@ register.addEventListener("submit", (e) => {
         redirect: "follow",
       };
 
-      fetch("http://13.246.40.149:3000/company/", requestOptions)
+      fetch("http://107.20.63.132:3000/company/", requestOptions)
         .then((response) => response.text())
         .then((result) => {
           alert("Company Account created successfully! Login now");
         })
-        .catch((error) => alert("Account creation failed maybe account already exists"));
+        .catch((error) =>
+          alert("Account creation failed maybe account already exists")
+        );
     };
     registerUser();
   }
@@ -145,12 +147,14 @@ register.addEventListener("submit", (e) => {
         redirect: "follow",
       };
 
-      fetch("http://13.246.40.149:3000/auth/intern/", requestOptions)
+      fetch("http://107.20.63.132:3000/auth/intern/", requestOptions)
         .then((response) => response.text())
         .then((result) => {
-          alert("Student Account created successfully")
+          alert("Student Account created successfully");
         })
-        .catch((error) => alert("Account creation failed maybe account already exists"));
+        .catch((error) =>
+          alert("Account creation failed maybe account already exists")
+        );
     };
     registerUser()
 
