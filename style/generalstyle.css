@@ -36,3 +36,46 @@ nav .active {
   -ms-overflow-style: none;  /* IE and Edge */
   scrollbar-width: none;  /* Firefox */
 } 
+.location{
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  background-color: rgba(42, 41, 41, 0.522);
+  z-index: 30;
+  backdrop-filter: blur(5px);
+  display: flex;
+  align-items: center ;
+  justify-content: center;
+}
+.location .location-wrapper{
+  width: 48rem;
+  height: 35rem;
+  background: white;
+  border-radius: 10px;
+  padding: 1rem .5rem;
+}
+.location .location-wrapper h2{
+  text-align: center;
+  font-size: 17px;
+  margin-bottom: 1rem;
+}
+.location .location-wrapper #map{
+  width: 100%;
+  height: 80%;
+  border-radius: 20px;
+}
+.location .location-wrapper .btns{
+  display: flex;
+  justify-content: space-around;
+  margin-top: 1rem;
+}
+.location .location-wrapper .btns button:last-of-type{
+  padding: .5rem 1.3rem;
+  background-color: blue;
+  border-radius: 15px;
+  color: white;
+}
+.hide-location{
+  display: none;
+}

@@ -32,6 +32,7 @@ const postdiv = document.querySelector(".create-post")
 const closepost = document.querySelector(".close-post")
 const postform = document.querySelector(".post-form")
 
+
 let userNameChange = sessionStorage.getItem("nameValue");
 // getting user infromation from the DOM
 let Companyname = document.querySelector(".companyname")
@@ -115,7 +116,7 @@ btn.forEach((btn) => {
 // === feting the data from the fake backend and displaying them
 try {
   async function fetching() {
-    const data = await fetch("http://107.20.63.132:3000/post")
+    const data = await fetch("http://localhost:3000/post")
       .then((datas) => {
         return datas;
       })
@@ -173,8 +174,8 @@ try {
         card.innerHTML = dataCombine;
       });
   }
-
   fetching();
 } catch (err) {
   console.log(err);
 }
+
