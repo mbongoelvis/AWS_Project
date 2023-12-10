@@ -3,8 +3,8 @@ const switchBtn2 = document.querySelectorAll(".switchbtn");
 // Getting labels
 const emailLabel = document.querySelector(".emailLabel2");
 const passwordLabel = document.querySelector(".passwordLabel2");
-const nameLabel = document.querySelector(".nameLabel")
-const numberLabel = document.querySelector(".numberLabel")
+const nameLabel = document.querySelector(".nameLabel");
+const numberLabel = document.querySelector(".numberLabel");
 
 // Change data entries for email and password
 const emailInput = document.querySelector(".email2");
@@ -18,8 +18,6 @@ const register = document.querySelector(".register");
 
 // Email matching regular expression
 const regex = /@gmail\.com$/;
-
-
 
 // Removing the active class
 const removeActive = () => {
@@ -67,11 +65,9 @@ switchBtn2.forEach((btn) => {
   });
 });
 
-
-
 // Event handlers for email and password inputs
 emailInput.addEventListener("input", () => {
-  const userType = emailInput.dataset.Signup
+  const userType = emailInput.dataset.Signup;
   console.log(`User type: ${userType}`);
   console.log(emailInput.value);
   if (!regex.test(emailInput.value)) {
@@ -116,7 +112,7 @@ register.addEventListener("submit", (e) => {
         redirect: "follow",
       };
 
-      fetch("http://locahost:3000/company/", requestOptions)
+      fetch("http://107.20.63.132:3000/company/", requestOptions)
         .then((response) => response.text())
         .then((result) => {
           alert("Company Account created successfully! Login now");
@@ -147,7 +143,7 @@ register.addEventListener("submit", (e) => {
         redirect: "follow",
       };
 
-      fetch("http://localhost:3000/auth/intern/", requestOptions)
+      fetch("http://107.20.63.132:3000/auth/intern/", requestOptions)
         .then((response) => response.text())
         .then((result) => {
           alert("Student Account created successfully");
@@ -156,7 +152,6 @@ register.addEventListener("submit", (e) => {
           alert("Account creation failed maybe account already exists")
         );
     };
-    registerUser()
-
+    registerUser();
   }
 });

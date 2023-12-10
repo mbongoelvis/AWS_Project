@@ -26,7 +26,7 @@ const creatingPost = async () => {
     body: raw,
     redirect: "follow",
   };
-  await fetch("http://localhost:3000/auth/post/", requestOptions);
+  await fetch("http://107.20.63.132:3000/auth/post/", requestOptions);
 };
 
 picture.addEventListener("change", () => {

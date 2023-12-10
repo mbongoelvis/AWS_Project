@@ -21,6 +21,8 @@ const notificationcard = document.querySelector(".notification-card1");
 const btnurs = document.querySelectorAll(".btnurs");
 const message = document.querySelector(".message");
 
+const searchPost = document.querySelector("#search-post");
+
 let userNameChange = sessionStorage.getItem("nameValue");
 let username = document.querySelector(".username");
 if (username) {
@@ -75,7 +77,7 @@ btnurs.forEach((btn) => {
 // === feting the data from the fake backend and displaying them ==
 try {
   async function fetching() {
-    const data = await fetch("http://localhost:3000/post")
+    const data = await fetch("http://107.20.63.132:3000/post")
       .then((datas) => {
         return datas;
       })
@@ -185,4 +187,5 @@ try {
 } catch (err) {
   console.log(err);
 }
+
 

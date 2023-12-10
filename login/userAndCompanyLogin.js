@@ -23,7 +23,7 @@ const removeActive = () => {
 };
 
 let companyName;
- let userName;
+let userName;
 // Adding event listeners for the buttons
 switchBtn.forEach((btn) => {
   btn.addEventListener("click", (e) => {
@@ -72,8 +72,6 @@ passwordInput.addEventListener("input", () => {
   }
 });
 
-
-
 // submitting the form
 form.addEventListener("submit", (e) => {
   e.preventDefault();
@@ -94,7 +92,7 @@ form.addEventListener("submit", (e) => {
       redirect: "follow",
     };
 
-    fetch("http://localhost:3000/auth/company/login", requestOptions)
+    fetch("http://107.20.63.132:3000/auth/company/login", requestOptions)
       .then((response) => {
         if (response.ok) {
           return response.json();
@@ -138,7 +136,7 @@ form.addEventListener("submit", (e) => {
       redirect: "follow",
     };
 
-    fetch("http://localhost:3000/auth/login", requestOptions)
+    fetch("http://107.20.63.132:3000/auth/login", requestOptions)
       .then((response) => {
         if (response.ok) {
           return response.json();
