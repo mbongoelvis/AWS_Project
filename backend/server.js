@@ -1,33 +1,61 @@
-const express = require('express');
-const cors = require('cors');
-const bodyParser = require('body-parser');
-
+const express = require("express");
 const app = express();
-app.use(cors());
-app.use(bodyParser.json());
+const PORT = 3000 || process.env.PORT;
 
-// Example login endpoints
-app.post('/auth/login', (req, res) => {
-  const { email, password } = req.body;
-  // Replace this with your real authentication logic
-  if (email === 'test@gmail.com' && password === 'password123') {
-    res.json({ name: 'Test User', email });
-  } else {
-    res.status(401).json({ error: 'Invalid credentials' });
-  }
-});
+// const http = require("http");
+// const server = http.createServer(app);
 
-app.post('/auth/company/login', (req, res) => {
-  const { email, password } = req.body;
-  // Replace this with your real authentication logic
-  if (email === 'company@gmail.com' && password === 'company123') {
-    res.json({ name: 'Test Company', email });
-  } else {
-    res.status(401).json({ error: 'Invalid credentials' });
-  }
-});
+require("dotenv").config();
+const morgan = require("morgan");
+const helmet = require("helmet");
+const cors = require("cors");
 
-const PORT = 3000;
-app.listen(PORT, () => {
-  console.log(`Backend server running on http://localhost:${PORT}`);
+/*******************************
+ *****importing all my routes ***
+ ********************************/
+
+const authRoutes = require("./routes/auth");
+const internRoutes = require("./routes/intern");
+const postRoutes = require("./routes/post");
+const companyRoutes = require("./routes/company");
+const applicationRoutes = require("./routes/application");
+
+
+
+/*******************************
+ ******** Mongo db connection ***
+ ********************************/
+const connection = require("./mongoConnect");
+connection();
+
+
+/*******************
+ *****  middleware  **
+ *********************/
+app.use(express.json()); //just as body parser
+app.use(helmet()); //help securing the request send
+app.use(cors()); //for cross platform request
+app.use(morgan("common")); //send in the console the detail about the request you did
+
+
+/*******************************
+ ******** Musing the routes  ***
+ ********************************/
+app.use("/auth", authRoutes);
+app.use("/intern", internRoutes);
+app.use("/post", postRoutes);
+app.use("/company", companyRoutes);
+app.use("/application", applicationRoutes);
+
+
+
+
+/*******************************
+ ******** Listening to port  ***
+ ********************************/
+// server.listen(PORT, (error) => {
+app.listen(PORT, (error) => {
+    if (error)
+        console.log(`an Error occurs while starting server on port ${PORT}`);
+    else console.log(`Server successfully started on port ${PORT}`);
 });
