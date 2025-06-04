@@ -112,7 +112,7 @@ register.addEventListener("submit", (e) => {
         redirect: "follow",
       };
 
-      fetch("http://3000/company/", requestOptions)
+      fetch("http://localhost:3000/company/", requestOptions)
         .then((response) => response.text())
         .then((result) => {
           alert("Company Account created successfully! Login now");
@@ -143,7 +143,7 @@ register.addEventListener("submit", (e) => {
         redirect: "follow",
       };
 
-      fetch("http://107.20.63.132:3000/auth/intern/", requestOptions)
+      fetch("http://localhost:3000/auth/intern/", requestOptions)
         .then((response) => response.text())
         .then((result) => {
           alert("Student Account created successfully");

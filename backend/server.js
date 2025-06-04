@@ -1,3 +1,4 @@
+require("dotenv").config();
 const express = require("express");
 const app = express();
 const PORT = 3000 || process.env.PORT;
@@ -19,8 +20,6 @@ const internRoutes = require("./routes/intern");
 const postRoutes = require("./routes/post");
 const companyRoutes = require("./routes/company");
 const applicationRoutes = require("./routes/application");
-
-
 
 /*******************************
  ******** Mongo db connection ***

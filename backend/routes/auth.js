@@ -3,11 +3,10 @@ const router = express.Router();
 const AuthController = require('../controllers/auth')
 
 
-router.post('/intern/', AuthController.CreateInter);
-router.post('/company/', AuthController.CreateCompany);
-router.post('/post/', AuthController.CreatePost);
-router.post('/login', AuthController.Login);
-router.post('/company/login', AuthController.LoginCompnay);
+router.post('/intern/', AuthController.createIntern);
+router.post('/company/', AuthController.createCompany);
+router.post('/login', AuthController.login);
+router.post('/company/login', AuthController.companyLogin);
 
 
 module.exports = router;

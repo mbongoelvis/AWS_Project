@@ -2,6 +2,25 @@ const Post = require("../models/post");
 
 //delele a post
 
+const createPost = async (req, res) => {
+  try {
+    const { title, content, author } = req.body; // Get post data from request body
+
+    const newPost = new Post({
+      title: title,
+      content: content,
+      author: author,
+    });
+
+    const savedPost = await newPost.save(); // Save the post to the database
+
+    res.status(201).json(savedPost); // Send a success response with the saved post
+  } catch (err) {
+    console.error(err);
+    res.status(500).json(err); // Send an error response
+  }
+}
+
 const deletePost = async (req, res) => {
   try {
     await Post.findByIdAndDelete(req.params.id);
@@ -35,6 +54,7 @@ const getAllPost = async (req, res) => {
 };
 
 module.exports = {
+  createPost,
   deletePost,
   getPost,
   getAllPost,
