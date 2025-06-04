@@ -92,7 +92,7 @@ form.addEventListener("submit", (e) => {
       redirect: "follow",
     };
 
-    fetch("http://107.20.63.132:3000/auth/company/login", requestOptions)
+    fetch("http://localhost/auth/company/login", requestOptions)
       .then((response) => {
         if (response.ok) {
           return response.json();
